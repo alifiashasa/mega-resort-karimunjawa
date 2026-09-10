@@ -1,0 +1,148 @@
+{
+  "nav": {
+    "home": "Home",
+    "rooms": "Rooms",
+    "facility": "Facility",
+    "gallery": "Gallery",
+    "package": "Package",
+    "discover": "Discover",
+    "blog": "Blog",
+    "contactUs": "Contact Us",
+    "faq": "FAQ",
+    "reserveNow": "Reserve Now",
+    "bookNow": "Pesan Sekarang"
+  },
+  "hero": {
+    "badge": "A HIDDEN PARADISE",
+    "of": "of",
+    "title": "MEGA RESORT KARIMUNJAWA",
+    "description": "More than just a place to stay, Mega Resort Karimunjawa is a destination where nature, comfort, and serenity meet. Surrounded by the beauty of Karimunjawa’s islands, every moment is designed to let you slow down, breathe deeper, and enjoy an authentic tropical escape from sunrise to sunset.",
+    "explore": "Explore Mega Resort",
+    "findStay": "Explore Mega Resort",
+    "cta": "Explore Mega Resort",
+    "bookNow": "Reservasi Sekarang"
+  },
+  "about": {
+    "badge": "Temukan Momen Berharga di Surga Tropis",
+    "title": "Discover the Beauty of Mega Resort Karimun Jawa",
+    "description": "Terletak di perairan kepulauan Karimunjawa yang memukau, Mega Resort Karimunjawa menawarkan tempat peristirahatan pulau terpencil di mana alam tropis berpadu dengan kenyamanan modern. Dikelilingi oleh lingkungan laut murni Taman Nasional Karimunjawa.",
+    "stat1Value": "20+",
+    "stat1Label": "Spot Diving & Snorkeling",
+    "stat2Value": "50+",
+    "stat2Label": "Pengalaman Pesisir Pilihan",
+    "stat3Value": "80+",
+    "stat3Label": "Pemandangan Senja & Alam"
+  },
+  "videoBanner": {
+    "title": "Mega Resort Karimunjawa",
+    "description": "Karimunjawa is a tropical sanctuary of natural beauty that gently awakens the senses. Surrounded by crystal-clear waters and endless horizons, the island offers a peaceful escape where soft ocean breezes and golden sunsets shape unforgettable moments. As daylight fades, the sky transforms into warm hues, creating a serene atmosphere that invites you to slow down, reconnect, and embrace the rhythm of island life at Mega Resort Karimunjawa.",
+    "playVideo": "Play Vidio"
+  },
+  "gallery": {
+    "badge": "Discover Moments, Framed in Paradise",
+    "title": "Gallary of Unforgettable Says",
+    "description": "Setiap sudut Mega Resort Karimunjawa menghadirkan keindahan yang tak terlupakan—dari panorama laut yang tenang, arsitektur yang elegan, hingga momen hangat yang tercipta di setiap pengalaman. Jelajahi keindahan yang kami hadirkan, satu frame dalam satu waktu.",
+    "bottomCaption": "Dari sunrise yang menenangkan hingga sunset yang memukau, setiap gambar menceritakan pengalaman istimewa yang menanti Anda di Mega Resort Karimunjawa.",
+    "contactUs": "CONTACT US",
+    "comingHere": "COMING HERE",
+    "instagram": "INSTAGRAM",
+    "whatsapp": "WHATSAPP"
+  },
+  "villa": {
+    "badge": "AKOMODASI EKSKLUSIF",
+    "title": "Penginapan Mewah di Atas Laut",
+    "viewDetails": "Lihat Detail",
+    "capacity": "Hingga 4 Tamu",
+    "bed": "King Size Bed",
+    "bookVilla": "Reservasi Vila"
+  },
+  "dining": {
+    "badge": "PENGALAMAN KULINER",
+    "title": "A Taste of Coastal Elegance",
+    "romanticDining": "Romantic Dining",
+    "description": "Nikmati perjalanan kuliner istimewa di mana cita rasa lokal Indonesia berpadu harmonis dengan hidangan kontemporer internasional. Nikmati hidangan laut segar, bahan tropis pilihan, dan santap malam romantis di bawah gemerlap bintang.",
+    "subDescription": "Rayakan momen berharga bersama orang terkasih dengan sajian privat tepi pantai kami dengan latar belakang panorama pesisir Karimunjawa.",
+    "readMore": "Baca Selengkapnya"
+  },
+  "packages": {
+    "badge": "PILIHAN PAKET TERBAIK",
+    "title": "Popular Package for Destination On KarimunJawa",
+    "description": "Discover curated stays and experiences in Karimunjawa — from relaxing beachfront accommodations to exciting island activities, all designed for a seamless tropical getaway.",
+    "allPackages": "All Package Rooms",
+    "bookPackage": "Book Package",
+    "details": "See Detail",
+    "reviews": "Review",
+    "category": "Category",
+    "priceForm": "Price Form",
+    "bestSeason": "Best Season",
+    "duration": "Duration"
+  },
+  "news": {
+    "badge": "BERITA & ARTIKEL TERBARU",
+    "title": "Discover Our All Latest News",
+    "description": "Explore a collection of premium amenities crafted to make every moment of your stay more relaxing, convenient, and memorable.",
+    "discoverMore": "Discover More Activities",
+    "readArticle": "Baca Artikel",
+    "allNews": "Discover More Activities"
+  },
+  "footer": {
+    "brandDescription": "Mega Resort Karimunjawa adalah eco-resort mewah di Taman Nasional Karimunjawa, menghadirkan liburan tak terlupakan di antara perairan biru toska dan kehangatan matahari terbenam.",
+    "quickLinks": "Tautan Cepat",
+    "aboutUs": "Tentang Kami",
+    "contactUs": "Kontak Kami",
+    "support": "Bantuan & Ketentuan",
+    "privacyPolicy": "Kebijakan Privasi",
+    "termsConditions": "Syarat & Ketentuan",
+    "faqs": "FAQ & Panduan",
+    "rights": "Hak cipta dilindungi undang-undang.",
+    "location": "Kepulauan Karimunjawa, Kabupaten Jepara, Jawa Tengah 59455, Indonesia"
+  },
+  "bookingModal": {
+    "title": "Reservasi Liburan Impian Anda",
+    "subtitle": "Isi formulir berikut dan staf concierge kami akan segera menghubungi Anda.",
+    "name": "Nama Lengkap",
+    "email": "Alamat Email",
+    "phone": "Nomor WhatsApp / Telepon",
+    "checkIn": "Tanggal Check-In",
+    "checkOut": "Tanggal Check-Out",
+    "package": "Paket / Vila Pilihan",
+    "guests": "Jumlah Tamu",
+    "submit": "Kirim Reservasi",
+    "success": "Terima kasih! Tim concierge kami akan segera menghubungi Anda melalui WhatsApp."
+  },
+  "roomsPage": {
+    "hero": {
+      "titlePrefix": "A COMFORTABLE ESCAPE",
+      "titleAt": "at",
+      "titleSuffix": "MEGA RESORT KARIMUNJAWA",
+      "description": "Lebih dari sekadar tempat menginap, setiap kamar di Mega Resort Karimunjawa dirancang dengan cermat untuk menghadirkan kenyamanan, ketenangan, dan hubungan mendalam dengan alam. Bangun dengan pemandangan perairan tenang, nikmati suasana damai, dan rasakan pengalaman menginap yang benar-benar istimewa.",
+      "exploreCta": "Explore All Room Stays"
+    },
+    "featured": {
+      "badge": "FEATURED ROOMS & EXLUSIVE OFFERS",
+      "title": "CAREFULLY SELECTED STAYS FOR A MORE MEMORABLE EXPERIENCE",
+      "description": "Explore a curated selection of our finest rooms, from guest favorites to exclusive limited-time offers. Each stay at Mega Resort Karimunjawa is designed to deliver comfort, beauty, and a sense of tranquility, whether you’re seeking a peaceful retreat, a romantic escape, or a special getaway."
+    },
+    "collection": {
+      "badge": "CAREFULLY SELECTED STAYS",
+      "title": "EXPLORE OUR FULL COLLECTION OF STAYS, DESIGNED FOR COMFORT AND RELAXATION",
+      "description": "Temukan koleksi lengkap kamar kami yang dirancang untuk menyatukan kenyamanan, gaya, dan keindahan alam. Baik untuk liburan pribadi, perjalanan romantis, maupun liburan keluarga, temukan tempat terbaik untuk bersantai dan menciptakan kenangan tak terlupakan."
+    },
+    "card": {
+      "basicInfo": "Basic Information",
+      "totalRooms": "Total Rooms",
+      "bathroom": "Bathroom",
+      "internet": "Internet",
+      "coveredParking": "Covered Parking",
+      "viewRoom": "View Room",
+      "bookingNow": "Booking Now",
+      "includesTaxes": "Includes 4 Taxes",
+      "night": "night",
+      "save": "Hemat",
+      "cleanliness": "Cleanliness",
+      "cleanlinessDesc": "Pondok yang terawat dengan sangat baik dan memberikan aroma kebersihan alami.",
+      "amenities": "Amenities",
+      "amenitiesDesc": "Dilengkapi dengan fasilitas penting untuk memberikan kenyamanan maksimal."
+    }
+  }
+}

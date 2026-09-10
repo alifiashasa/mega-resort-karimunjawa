@@ -1,0 +1,148 @@
+{
+  "nav": {
+    "home": "Home",
+    "rooms": "Rooms",
+    "facility": "Facility",
+    "gallery": "Gallery",
+    "package": "Package",
+    "discover": "Discover",
+    "blog": "Blog",
+    "contactUs": "Contact Us",
+    "faq": "FAQ",
+    "reserveNow": "Reserve Now",
+    "bookNow": "Book Now"
+  },
+  "hero": {
+    "badge": "A HIDDEN PARADISE",
+    "of": "of",
+    "title": "MEGA RESORT KARIMUNJAWA",
+    "description": "More than just a place to stay, Mega Resort Karimunjawa is a destination where nature, comfort, and serenity meet. Surrounded by the beauty of Karimunjawa’s islands, every moment is designed to let you slow down, breathe deeper, and enjoy an authentic tropical escape from sunrise to sunset.",
+    "explore": "Explore Mega Resort",
+    "findStay": "Explore Mega Resort",
+    "cta": "Explore Mega Resort",
+    "bookNow": "Reserve Now"
+  },
+  "about": {
+    "badge": "Discover Moments, Framed in Paradise",
+    "title": "Discover the Beauty of Mega Resort Karimun Jawa",
+    "description": "Nestled within the breathtaking waters of the Karimunjawa archipelago, Mega Resort Karimunjawa offers a secluded island escape where tropical nature meets modern comfort. Located on a private island surrounded by the pristine marine environment of Karimunjawa National Park.",
+    "stat1Value": "20+",
+    "stat1Label": "Diving & Snorkeling Spots",
+    "stat2Value": "50+",
+    "stat2Label": "Curated Coastal Experiences",
+    "stat3Value": "80+",
+    "stat3Label": "Sunset Views & Nature Escapes"
+  },
+  "videoBanner": {
+    "title": "Mega Resort Karimunjawa",
+    "description": "Karimunjawa is a tropical sanctuary of natural beauty that gently awakens the senses. Surrounded by crystal-clear waters and endless horizons, the island offers a peaceful escape where soft ocean breezes and golden sunsets shape unforgettable moments. As daylight fades, the sky transforms into warm hues, creating a serene atmosphere that invites you to slow down, reconnect, and embrace the rhythm of island life at Mega Resort Karimunjawa.",
+    "playVideo": "Play Vidio"
+  },
+  "gallery": {
+    "badge": "Discover Moments, Framed in Paradise",
+    "title": "Gallary of Unforgettable Says",
+    "description": "Every corner of Mega Resort Karimunjawa brings unforgettable beauty—from serene ocean panoramas and elegant architecture to warm moments shaped in every experience. Explore the beauty we bring to life, one frame at a time.",
+    "bottomCaption": "From tranquil sunrises to breathtaking sunsets, every frame tells the story of an extraordinary journey awaiting you at Mega Resort Karimunjawa.",
+    "contactUs": "CONTACT US",
+    "comingHere": "COMING HERE",
+    "instagram": "INSTAGRAM",
+    "whatsapp": "WHATSAPP"
+  },
+  "villa": {
+    "badge": "EXCLUSIVE ACCOMMODATION",
+    "title": "A Luxurious Stay Over The Ocean",
+    "viewDetails": "View Details",
+    "capacity": "Up to 4 Guests",
+    "bed": "King Size Bed",
+    "bookVilla": "Reserve Villa"
+  },
+  "dining": {
+    "badge": "CULINARY EXPERIENCES",
+    "title": "A Taste of Coastal Elegance",
+    "romanticDining": "Romantic Dining",
+    "description": "Indulge in an exquisite culinary journey where local Indonesian flavors blend seamlessly with contemporary international cuisine. Savor freshly caught seafood, farm-to-table tropical produce, and bespoke candlelit dinners under the starlit sky.",
+    "subDescription": "Celebrate love and life with our signature beachfront private dining set against the enchanting backdrop of the Karimunjawa coastline.",
+    "readMore": "Read More"
+  },
+  "packages": {
+    "badge": "CURATED EXPERIENCES",
+    "title": "Popular Package for Destination On KarimunJawa",
+    "description": "Discover curated stays and experiences in Karimunjawa — from relaxing beachfront accommodations to exciting island activities, all designed for a seamless tropical getaway.",
+    "allPackages": "All Package Rooms",
+    "bookPackage": "Book Package",
+    "details": "See Detail",
+    "reviews": "Review",
+    "category": "Category",
+    "priceForm": "Price Form",
+    "bestSeason": "Best Season",
+    "duration": "Duration"
+  },
+  "news": {
+    "badge": "LATEST UPDATES",
+    "title": "Discover Our All Latest News",
+    "description": "Explore a collection of premium amenities crafted to make every moment of your stay more relaxing, convenient, and memorable.",
+    "discoverMore": "Discover More Activities",
+    "readArticle": "Read Article",
+    "allNews": "Discover More Activities"
+  },
+  "footer": {
+    "brandDescription": "Mega Resort Karimunjawa is a premier luxury eco-resort nestled in the pristine Karimunjawa National Park, providing an unforgettable escape between azure waters and golden sunsets.",
+    "quickLinks": "Quick Links",
+    "aboutUs": "About Us",
+    "contactUs": "Contact Us",
+    "support": "Support & Policy",
+    "privacyPolicy": "Privacy Policy",
+    "termsConditions": "Terms & Conditions",
+    "faqs": "FAQs & Guidelines",
+    "rights": "All rights reserved.",
+    "location": "Karimunjawa Islands, Jepara Regency, Central Java 59455, Indonesia"
+  },
+  "bookingModal": {
+    "title": "Reserve Your Island Getaway",
+    "subtitle": "Fill in your details and our concierge will contact you immediately.",
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "WhatsApp / Phone Number",
+    "checkIn": "Check-In Date",
+    "checkOut": "Check-Out Date",
+    "package": "Selected Package / Villa",
+    "guests": "Number of Guests",
+    "submit": "Submit Reservation",
+    "success": "Thank you! Our concierge team will reach out to you via WhatsApp shortly."
+  },
+  "roomsPage": {
+    "hero": {
+      "titlePrefix": "A COMFORTABLE ESCAPE",
+      "titleAt": "at",
+      "titleSuffix": "MEGA RESORT KARIMUNJAWA",
+      "description": "More than just a place to stay, each room at Mega Resort Karimunjawa is thoughtfully designed to bring comfort, tranquility, and a deeper connection to nature. Wake up to calm waters, unwind in peaceful surroundings, and experience a stay that feels truly special.",
+      "exploreCta": "Explore All Room Stays"
+    },
+    "featured": {
+      "badge": "FEATURED ROOMS & EXLUSIVE OFFERS",
+      "title": "CAREFULLY SELECTED STAYS FOR A MORE MEMORABLE EXPERIENCE",
+      "description": "Explore a curated selection of our finest rooms, from guest favorites to exclusive limited-time offers. Each stay at Mega Resort Karimunjawa is designed to deliver comfort, beauty, and a sense of tranquility, whether you’re seeking a peaceful retreat, a romantic escape, or a special getaway."
+    },
+    "collection": {
+      "badge": "CAREFULLY SELECTED STAYS",
+      "title": "EXPLORE OUR FULL COLLECTION OF STAYS, DESIGNED FOR COMFORT AND RELAXATION",
+      "description": "Discover our full collection of stays, thoughtfully designed to bring comfort, style, and natural beauty together. Whether you are looking for a private getaway, a romantic retreat, or a family vacation, find the perfect space to unwind and create unforgettable memories."
+    },
+    "card": {
+      "basicInfo": "Basic Information",
+      "totalRooms": "Total Rooms",
+      "bathroom": "Bathroom",
+      "internet": "Internet",
+      "coveredParking": "Covered Parking",
+      "viewRoom": "View Room",
+      "bookingNow": "Booking Now",
+      "includesTaxes": "Includes 4 Taxes",
+      "night": "night",
+      "save": "Save",
+      "cleanliness": "Cleanliness",
+      "cleanlinessDesc": "A well-maintained cottage which gives a smell of cleanliness.",
+      "amenities": "Amenities",
+      "amenitiesDesc": "Equipped with essential amenities to provide convenience."
+    }
+  }
+}

@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Playfair Display', 'Cinzel', Georgia, serif;
+  --font-cursive: 'Great Vibes', cursive;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-opensans: 'Open Sans', system-ui, -apple-system, sans-serif;
+  --font-spartan: 'League Spartan', system-ui, -apple-system, sans-serif;
+  --font-urbanist: 'Urbanist', system-ui, -apple-system, sans-serif;
+  --font-allura: 'Allura', cursive;
+
+  --color-gold-50: #fdfbf7;
+  --color-gold-100: #f9f4ea;
+  --color-gold-200: #f1e4cb;
+  --color-gold-300: #e5cd9e;
+  --color-gold-400: #d4b06c;
+  --color-gold-500: #b98e46;
+  --color-gold-600: #9e7336;
+  --color-gold-700: #7e562c;
+  --color-gold-800: #684628;
+  --color-gold-900: #573b24;
+
+  --color-sand-50: #faf7f2;
+  --color-sand-100: #f4eee3;
+  --color-sand-200: #ebdcc9;
+  --color-sand-300: #dec4a6;
+  --color-sand-400: #cfaa83;
+  --color-sand-500: #826e58;
+  --color-sand-600: #715e4a;
+  --color-sand-700: #594939;
+
+  --color-earth-900: #1b1713;
+  --color-earth-800: #29241f;
+  --color-earth-700: #3b342e;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    color: #29241f;
+    background-color: #faf7f2;
+  }
+
+  body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.font-script {
+  font-family: 'Alex Brush', 'Great Vibes', cursive;
+}
+
+.font-allura {
+  font-family: 'Allura', cursive;
+}
+
+.font-dancing {
+  font-family: 'Dancing Script', cursive;
+}
+
+.font-luxury {
+  font-family: 'Playfair Display', 'Cinzel', Georgia, serif;
+}
+
+.font-spartan {
+  font-family: 'League Spartan', sans-serif;
+}
+
+.font-urbanist {
+  font-family: 'Urbanist', sans-serif;
+}
+
+.font-opensans {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.font-hanken {
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.shadow-button-outlined-default {
+  box-shadow: 0px 1px 0px 0px #A4A7AE, 1px 0px 0px 0px #D5D7DA, -1px 0px 0px 0px #D5D7DA, 0px -1px 0px 0px #D5D7DA;
+}
+
+.btn-detail-outlined {
+  background-color: #ffffff;
+  box-shadow: 0px 1px 0px 0px #A4A7AE, 1px 0px 0px 0px #D5D7DA, -1px 0px 0px 0px #D5D7DA, 0px -1px 0px 0px #D5D7DA;
+}
+
+.btn-book-solid {
+  background-color: #977E5B;
+  box-shadow: 0px 1px 0px 0px #634F33, 1px 0px 0px 0px #856C4A, -1px 0px 0px 0px #856C4A, 0px -1px 0px 0px #856C4A;
+}
+
+/* Glassmorphism utility */
+.glass-nav {
+  background: rgba(26, 24, 21, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.glass-card-dark {
+  background: rgba(27, 23, 19, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4eee3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cfaa83;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b98e46;
+}
