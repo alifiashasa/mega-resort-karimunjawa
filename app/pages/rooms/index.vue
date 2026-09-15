@@ -28,7 +28,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="overflow-x-hidden bg-[#FDFDFD]">
+  <div class="overflow-x-hidden bg-[#FAFAFA]">
     <!-- Reusable Hero Section -->
     <HeroSection
       id="rooms-hero"
@@ -51,4 +51,3 @@ useSeoMeta({
     <RoomsCollectionSection />
   </div>
 </template>
-

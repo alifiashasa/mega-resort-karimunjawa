@@ -2,6 +2,7 @@
 import { useResortStore } from '~/stores/resortStore'
 import { ChevronDown } from 'lucide-vue-next'
 import IconLotus from '~/components/common/icons/IconLotus.vue'
+import Icon360View from '~/components/common/icons/Icon360View.vue'
 
 interface Props {
   id?: string
@@ -13,6 +14,9 @@ interface Props {
   description?: string
   ctaText?: string
   ctaTargetId?: string
+  ctaIcon?: 'lotus' | '360' | 'none'
+  ctaType?: 'scroll' | 'booking' | 'video' | 'custom'
+  ctaClass?: string
   showScrollDown?: boolean
   scrollDownTarget?: string
   minHeight?: string
@@ -29,16 +33,28 @@ const props = withDefaults(defineProps<Props>(), {
   description: '',
   ctaText: '',
   ctaTargetId: '',
+  ctaIcon: 'lotus',
+  ctaType: 'custom',
+  ctaClass: '',
   showScrollDown: true,
   scrollDownTarget: '#about',
   minHeight: 'min-h-[620px] sm:min-h-[720px] lg:h-[820px]',
   overlayClass: 'bg-black/25',
 })
 
+const emit = defineEmits<{
+  (e: 'cta-click'): void
+}>()
+
 const { t } = useI18n()
 const store = useResortStore()
 
 const handleCtaClick = () => {
+  emit('cta-click')
+  if (props.ctaType === 'video') {
+    store.openVideoModal()
+    return
+  }
   if (props.ctaTargetId) {
     const target = document.querySelector(props.ctaTargetId)
     if (target) {
@@ -46,7 +62,9 @@ const handleCtaClick = () => {
       return
     }
   }
-  store.openBookingModal()
+  if (props.ctaType === 'booking') {
+    store.openBookingModal()
+  }
 }
 </script>
 
@@ -93,17 +111,31 @@ const handleCtaClick = () => {
         {{ description || t('hero.description') }}
       </p>
 
-      <!-- Pill Button: Explore Mega Resort matching Figma design -->
+      <!-- Pill Button: Reusable CTA matching design -->
       <div class="flex justify-center">
-        <button
-          type="button"
-          class="group inline-flex items-center justify-center gap-2.5 h-[48px] px-6 min-w-[215px] rounded-[16px] border border-[#FAFAFA] bg-transparent hover:bg-white/10 text-[#FAFAFA] font-sans text-[15px] sm:text-[16px] tracking-wide transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] cursor-pointer shadow-lg"
-          @click="handleCtaClick"
-        >
-          <!-- Lotus Emblem Icon -->
-          <IconLotus class-name="w-6 h-[18px] sm:w-6.5 sm:h-5 shrink-0 transition-transform duration-300 group-hover:scale-110" />
-          <span class="whitespace-nowrap">{{ ctaText || t('hero.explore') }}</span>
-        </button>
+        <slot name="cta">
+          <button
+            v-if="ctaText"
+            type="button"
+            class="group inline-flex items-center justify-center gap-2.5 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] cursor-pointer shadow-lg"
+            :class="[
+              ctaClass || 'h-[48px] px-6 min-w-[215px] rounded-[16px] border border-[#FAFAFA] bg-transparent hover:bg-white/10 text-[#FAFAFA] font-sans text-[15px] sm:text-[16px] tracking-wide'
+            ]"
+            @click="handleCtaClick"
+          >
+            <!-- 360 Icon -->
+            <Icon360View
+              v-if="ctaIcon === '360'"
+              class-name="w-4 h-4 sm:w-5 sm:h-5 text-white shrink-0 transition-transform duration-300 group-hover:rotate-12"
+            />
+            <!-- Lotus Emblem Icon -->
+            <IconLotus
+              v-else-if="ctaIcon === 'lotus'"
+              class-name="w-6 h-[18px] sm:w-6.5 sm:h-5 shrink-0 transition-transform duration-300 group-hover:scale-110"
+            />
+            <span class="whitespace-nowrap">{{ ctaText || t('hero.explore') }}</span>
+          </button>
+        </slot>
       </div>
     </div>
 

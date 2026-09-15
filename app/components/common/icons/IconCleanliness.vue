@@ -4,7 +4,7 @@ interface Props {
 }
 
 withDefaults(defineProps<Props>(), {
-  className: 'w-3.5 h-3.5 stroke-[2]',
+  className: 'w-4 h-4',
 })
 </script>
 
@@ -13,14 +13,17 @@ withDefaults(defineProps<Props>(), {
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
+    stroke-width="1.8"
     stroke-linecap="round"
     stroke-linejoin="round"
     :class="className"
   >
-    <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
-    <path d="M5 3v4" />
-    <path d="M19 17v4" />
-    <path d="M3 5h4" />
-    <path d="M17 19h4" />
+    <!-- Broom / cleaning whisk icon -->
+    <path d="m14 10 5.5-5.5a1.5 1.5 0 0 0-2.1-2.1L12 8" />
+    <path d="m11.5 9.5-2 2a3.5 3.5 0 0 0 4.9 4.9l2-2" />
+    <path d="m13.5 11.5-2.5 2.5" />
+    <path d="m7.5 16.5-3 3" />
+    <path d="m9.5 18.5-3 3" />
   </svg>
 </template>
+

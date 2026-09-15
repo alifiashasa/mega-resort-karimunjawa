@@ -4,7 +4,7 @@ interface Props {
 }
 
 withDefaults(defineProps<Props>(), {
-  className: 'w-3.5 h-3.5 stroke-[2]',
+  className: 'w-4 h-4',
 })
 </script>
 
@@ -13,12 +13,20 @@ withDefaults(defineProps<Props>(), {
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
+    stroke-width="1.8"
     stroke-linecap="round"
     stroke-linejoin="round"
     :class="className"
   >
-    <circle cx="7.5" cy="15.5" r="5.5" />
-    <path d="m21 2-9.6 9.6" />
-    <path d="m15.5 7.5 3 3L22 7l-3-3" />
+    <!-- Cup body -->
+    <path d="M4 9h12v5a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9Z" />
+    <!-- Handle -->
+    <path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16" />
+    <!-- Saucer -->
+    <path d="M3 21h15" />
+    <!-- Steam -->
+    <path d="M7 4v2" />
+    <path d="M11 3v3" />
   </svg>
 </template>
+

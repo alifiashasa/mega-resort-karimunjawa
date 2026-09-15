@@ -13,17 +13,17 @@ const featuredRooms = computed(() => {
   return filtered.length > 0 ? filtered : rooms.slice(0, 3)
 })
 
+const router = useRouter()
+const localePath = useLocalePath()
+
 const handleSelectRoom = (room: RoomItem) => {
-  // Smooth scroll to full collection or open booking modal
-  const target = document.getElementById('collection')
-  if (target) {
-    target.scrollIntoView({ behavior: 'smooth' })
-  }
+  const slug = room.name ? room.name.toLowerCase().replace(/[^a-z0-9]+/g, '-') : String(room.id)
+  router.push(localePath(`/rooms/${slug}`))
 }
 </script>
 
 <template>
-  <section id="featured-rooms" class="py-16 sm:py-20 lg:py-24 bg-[#FDFDFD]">
+  <section id="featured-rooms" class="py-16 sm:py-20 lg:py-24 bg-[#FAFAFA]">
     <div class="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
       
       <!-- Section Header -->
