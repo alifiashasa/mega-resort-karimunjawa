@@ -30,7 +30,7 @@ const galleryPhotos = [
 </script>
 
 <template>
-  <section class="py-8 bg-[#FAF7F2]">
+  <section class="py-8 bg-[#FFF9EB]">
     <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 space-y-6 sm:space-y-8">
       
       <!-- 4-Grid Horizontal Gallery Row -->

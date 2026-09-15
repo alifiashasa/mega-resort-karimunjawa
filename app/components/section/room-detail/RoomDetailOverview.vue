@@ -17,16 +17,11 @@ const currentRoom = computed(() => {
     name: 'Mermaid Room',
     fullName: 'Mermaid Room Mega Resort Karimunjawa',
     image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80',
-    price: 5600000,
+    price: 7499,
     priceUnit: 'night',
-    category: 'OVERWATER VILLA • KARIMUNJAWA PARADISE',
+    category: 'COMFORTABLE STAY, THOUGHTFULLY DESIGNED',
   }
 })
-
-const formatPrice = (val?: number) => {
-  if (!val) return 'IDR 5,600,000'
-  return 'IDR ' + val.toLocaleString('id-ID')
-}
 
 const handleBooking = () => {
   store.openBookingModal(null, null, currentRoom.value as any)
@@ -34,58 +29,64 @@ const handleBooking = () => {
 </script>
 
 <template>
-  <section class="py-12 sm:py-16 bg-[#FAF7F2]">
+  <section class="py-16 sm:py-20 lg:py-24 bg-[#FFF9EB]">
     <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-      <!-- Main Beige Card Container -->
-      <div class="bg-[#F8F4EC] rounded-[24px] p-6 sm:p-8 lg:p-10 border border-[#ECE5D8] shadow-xs">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          
-          <!-- Left Column: Large Bungalow Photo (Span 6) -->
-          <div class="lg:col-span-6">
-            <div class="relative w-full h-[280px] sm:h-[360px] lg:h-[420px] rounded-[18px] overflow-hidden shadow-md group bg-[#e5e7eb]">
-              <img
-                :src="currentRoom.image || 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80'"
-                :alt="currentRoom.name"
-                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
-              />
-            </div>
+      <div class="flex flex-col lg:flex-row items-center lg:items-stretch justify-between gap-8 lg:gap-12 xl:gap-16">
+        
+        <!-- Left Column: Large Bungalow Image (w: 636px, h: 551px, radius: 20px) -->
+        <div class="w-full lg:w-[636px] shrink-0">
+          <div class="relative w-full max-w-[636px] h-[340px] sm:h-[420px] md:h-[480px] lg:h-[551px] rounded-[20px] overflow-hidden group shadow-sm bg-[#e5e7eb]">
+            <img
+              :src="currentRoom.image || 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80'"
+              :alt="currentRoom.name"
+              class="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-700 ease-out"
+            />
           </div>
+        </div>
 
-          <!-- Right Column: Room Details & Booking (Span 6) -->
-          <div class="lg:col-span-6 flex flex-col justify-center space-y-4 sm:space-y-5">
-            <!-- Lotus Icon & Category Subtitle -->
-            <div class="flex items-center gap-2.5">
-              <IconLotus fill-color="#977E5B" class-name="w-6 h-5 shrink-0" />
-              <span class="font-urbanist text-xs sm:text-[14px] uppercase tracking-[0.16em] text-[#977E5B] font-semibold">
-                {{ currentRoom.category || 'OVERWATER VILLA • KARIMUNJAWA PARADISE' }}
+        <!-- Right Column: Room Description & Actions (Aligned to 551px height of image) -->
+        <div class="flex-1 w-full flex flex-col justify-between lg:h-[551px] -mt-0.5 lg:-mt-1">
+          
+          <!-- Top Group: Lotus Icon, Subtitle, Title & Description -->
+          <div class="space-y-4">
+            <!-- Lotus Icon & Subtitle -->
+            <div class="space-y-2">
+              <div class="w-12 h-9 sm:w-14 sm:h-10 mb-4">
+                <IconLotus fill-color="#977E5B" class-name="w-full h-full" />
+              </div>
+              <span class="font-opensans text-xs sm:text-[15px] uppercase tracking-[0.16em] text-[#717680] font-normal block">
+                COMFORTABLE STAY, THOUGHTFULLY DESIGNED
               </span>
             </div>
 
-            <!-- Room Name Header -->
-            <h2 class="font-spartan text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#977E5B] tracking-tight uppercase leading-tight">
+            <!-- Room Title -->
+            <h2 class="font-spartan text-3xl sm:text-4xl lg:text-[46px] font-semibold text-[#977E5B] tracking-tight uppercase leading-tight">
               {{ currentRoom.name || 'MERMAID ROOM' }}
             </h2>
 
-            <!-- Detailed Room Description -->
-            <p class="font-opensans text-xs sm:text-[14px] text-[#717680] leading-[1.75] font-normal">
-              Escape into comfort and modern elegance in our spacious room. Thoughtfully designed to blend contemporary aesthetics with warm tropical accents, this room is a peaceful sanctuary where you can unwind in style after a day exploring the island. Relax on the plush bed, enjoy scenic views from the private balcony, and embrace the tranquil island breeze. Whether for romance or quiet retreat, everything is tailored for your pure relaxation.
+            <!-- Detailed Paragraph Description -->
+            <p class="font-opensans text-[13px] sm:text-[14px] lg:text-[18px] text-[#717680] leading-[1.8] font-normal">
+              Designed to provide a seamless balance between comfort and natural beauty, this room offers a tranquil space where you can truly unwind. Every detail is thoughtfully curated, from the cozy interior to the calming atmosphere that surrounds you. Wake up to refreshing views, enjoy the gentle breeze, and relax in a setting that feels both intimate and serene. Whether you're here for a short escape or a longer stay, this room ensures a comfortable and memorable experience throughout your time in Karimunjawa.
             </p>
+          </div>
 
-            <!-- Price Row -->
-            <div class="pt-2 flex items-baseline gap-1.5 font-spartan">
-              <span class="text-2xl sm:text-[28px] font-bold text-[#1f1a16]">
-                {{ formatPrice(currentRoom.price || 5600000) }}
+          <!-- Bottom Group: Price & Booking Button (Aligned with bottom edge of image) -->
+          <div class="pt-8 lg:pt-8 space-y-4">
+            <!-- Price Display (League Spartan) -->
+            <div class="flex items-baseline gap-1 font-spartan">
+              <span class="text-2xl sm:text-3xl lg:text-[32px] font-normal text-[#1f1a16]">
+                $7,499
               </span>
-              <span class="font-opensans text-xs sm:text-[14px] text-[#717680] font-normal">
-                / {{ currentRoom.priceUnit || 'night' }}
+              <span class="text-sm sm:text-[20px] text-[#A4A7AE] font-normal">
+                /night
               </span>
             </div>
 
-            <!-- Booking CTA Button -->
-            <div class="pt-2">
+            <!-- Booking Now Button -->
+            <div>
               <button
                 type="button"
-                class="h-[46px] sm:h-[48px] px-8 flex items-center justify-center bg-gradient-to-b from-[#977E5B] to-[#887050] hover:from-[#8E7554] hover:to-[#7D6647] text-white font-opensans text-xs sm:text-[14px] font-medium rounded-[12px] border border-[#715B3E] shadow-[0_2px_4px_rgba(0,0,0,0.12),inset_0_1px_1px_rgba(255,255,255,0.4),inset_0_-2px_3px_rgba(0,0,0,0.35)] transition-all duration-200 cursor-pointer active:scale-[0.98]"
+                class="h-[46px] px-8 flex items-center justify-center bg-[#8E7656] hover:bg-[#7D6647] text-white font-opensans text-xs sm:text-[14px] font-medium rounded-[10px] shadow-xs transition-all duration-200 cursor-pointer active:scale-[0.98]"
                 @click="handleBooking"
               >
                 Booking Now
@@ -94,6 +95,7 @@ const handleBooking = () => {
           </div>
 
         </div>
+
       </div>
     </div>
   </section>
