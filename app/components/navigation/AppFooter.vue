@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import ResortLogo from '~/components/common/ResortLogo.vue'
 import { Phone, Mail, MapPin, Instagram, Star, Award, ShieldCheck } from 'lucide-vue-next'
+import IconTiktok from '~/components/common/icons/IconTiktok.vue'
+import IconStarSolid from '~/components/common/icons/IconStarSolid.vue'
+import IconAwardShield from '~/components/common/icons/IconAwardShield.vue'
+import IconTreeLeaf from '~/components/common/icons/IconTreeLeaf.vue'
 
 const currentYear = new Date().getFullYear()
 const localePath = useLocalePath()
@@ -8,11 +12,11 @@ const localePath = useLocalePath()
 const siteMapLinks = computed(() => [
   { name: 'Home', href: localePath('/') },
   { name: 'Rooms', href: localePath('/rooms') },
-  { name: 'Facility', href: localePath('/') + '#about' },
-  { name: 'Gallary', href: localePath('/') + '#gallery' },
-  { name: 'Package', href: localePath('/') + '#package' },
+  { name: 'Facility', href: localePath('/facility') },
+  { name: 'Gallery', href: localePath('/gallery') },
+  { name: 'Package', href: localePath('/package') },
   { name: 'Discover', href: localePath('/') + '#about' },
-  { name: 'Blog', href: localePath('/') + '#blog' },
+  { name: 'Blog', href: localePath('/blog') },
   { name: 'Contact Us', href: '#contact' },
   { name: 'FAQ', href: '#faq' },
 ])

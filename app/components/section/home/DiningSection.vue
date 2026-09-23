@@ -4,6 +4,7 @@ import IconArrowLongLeft from '~/components/common/icons/IconArrowLongLeft.vue'
 import IconArrowLongRight from '~/components/common/icons/IconArrowLongRight.vue'
 
 const { t } = useI18n()
+const localePath = useLocalePath()
 const store = useResortStore()
 
 // 5 Curated Dining Experiences matching the 3/5 counter in the design
@@ -156,13 +157,12 @@ const nextDining = () => {
             <!-- Bottom Actions: View More Button & Prev/Next Arrows -->
             <div class="flex items-center justify-between pt-2">
               <!-- Outlined View More Button -->
-              <button
-                type="button"
-                class="px-7 sm:px-8 py-2.5 sm:py-3 border border-white/80 hover:border-white text-white rounded-[14px] text-sm sm:text-[15px] font-opensans font-normal tracking-normal bg-transparent hover:bg-white/10 transition-all active:scale-95 cursor-pointer"
-                @click="store.openBookingModal()"
+              <NuxtLink
+                :to="localePath('/gallery') + '#glimpse-excellence'"
+                class="inline-flex items-center justify-center px-7 sm:px-8 py-2.5 sm:py-3 border border-white/80 hover:border-white text-white rounded-[14px] text-sm sm:text-[15px] font-opensans font-normal tracking-normal bg-transparent hover:bg-white/10 transition-all active:scale-95 cursor-pointer"
               >
                 View More
-              </button>
+              </NuxtLink>
 
               <!-- Navigation Arrows on the right stacked vertically -->
               <div class="flex flex-col items-center gap-2 text-white">

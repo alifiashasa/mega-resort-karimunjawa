@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { PackageItem } from '~/types'
 import { ArrowLeft, ArrowRight } from 'lucide-vue-next'
+import IconRibbonBadge from '~/components/common/icons/IconRibbonBadge.vue'
+import IconStar from '~/components/common/icons/IconStar.vue'
 
 interface Props {
   pkg: PackageItem
@@ -20,6 +22,9 @@ const emit = defineEmits<{
 const formatPrice = (val: number) => {
   return 'Rp ' + val.toLocaleString('id-ID')
 }
+
+const localePath = useLocalePath()
+const detailUrl = computed(() => localePath('/package/detail'))
 </script>
 
 <template>
@@ -149,13 +154,12 @@ const formatPrice = (val: number) => {
         <!-- 4. Action Row: Buttons & Arrows -->
         <div class="flex items-center justify-between font-urbanist">
           <div class="flex items-center gap-2 sm:gap-2.5">
-            <button
-              type="button"
-              class="font-urbanist px-3.5 sm:px-4 py-2 rounded-[12px] btn-detail-outlined text-[13px] sm:text-[14px] font-normal text-[#8F7553] hover:opacity-95 active:translate-y-[1px] transition-all cursor-pointer"
-              @click="emit('detail', pkg)"
+            <NuxtLink
+              :to="detailUrl"
+              class="font-urbanist px-3.5 sm:px-4 py-2 rounded-[12px] btn-detail-outlined text-[13px] sm:text-[14px] font-normal text-[#8F7553] hover:opacity-95 active:translate-y-[1px] transition-all cursor-pointer inline-flex items-center justify-center text-center"
             >
               See Detail
-            </button>
+            </NuxtLink>
             <button
               type="button"
               class="font-urbanist px-3.5 sm:px-4 py-2 rounded-[12px] btn-book-solid text-[13px] sm:text-[14px] font-normal text-white hover:opacity-95 active:translate-y-[1px] transition-all cursor-pointer"

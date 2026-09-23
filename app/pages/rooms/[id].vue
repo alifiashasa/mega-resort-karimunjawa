@@ -105,7 +105,7 @@ useSeoMeta({
       title="Popular Package for Destination On KarimunJawa"
       description="Discover our most popular packages crafted to provide the ultimate KarimunJawa experience. Combining luxury, adventure, and serenity for an unforgettable getaway."
       view-all-text="View All Packages"
-      view-all-href="/#package"
+      view-all-href="/package"
       bg-class="bg-[#FFF9EB]"
       container-class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12"
     />

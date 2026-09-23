@@ -25,6 +25,7 @@ export interface VillaHighlight {
 
 export interface PackageItem {
   id: number
+  slug?: string
   title: string
   category: string
   duration: string
@@ -99,6 +100,15 @@ export interface RoomItem {
   }
 }
 
+export interface FacilityItem {
+  id: number
+  name: string
+  image: string
+  description: string
+  descriptionEn?: string
+  category?: string
+}
+
 export interface ResortData {
   name: string
   tagline: string
@@ -115,6 +125,7 @@ export interface ResortData {
   gallery: GalleryItem[]
   villas: VillaHighlight[]
   rooms?: RoomItem[]
+  facilities?: FacilityItem[]
   dining: DiningFeature
   packages: PackageItem[]
   news: NewsItem[]

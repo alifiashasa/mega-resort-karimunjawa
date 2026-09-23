@@ -69,21 +69,23 @@ const handleCtaClick = () => {
     </div>
 
     <!-- Content Container -->
-    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white pt-14 pb-20 flex flex-col items-center">
+    <div class="relative z-10 max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white pt-14 pb-20 flex flex-col items-center">
       <!-- Lotus Leaf Emblem in Center (from official logo-megaresort.svg) -->
       <div class="w-12 h-9 sm:w-16 sm:h-12 mb-5 sm:mb-6">
         <IconLotus fill-color="#FFFFFF" class-name="w-full h-full drop-shadow-sm" />
       </div>
 
-      <!-- Subtitle & Main Title matching Figma Reference -->
-      <div class="mb-4">
-        <h2 class="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-[48px] tracking-[0.14em] uppercase font-normal text-white leading-tight flex items-baseline justify-center flex-wrap gap-x-2 sm:gap-x-3">
-          <span>{{ badgePrefix || t('hero.badge') }}</span>
-          <span class="font-script lowercase font-normal italic tracking-normal text-3xl sm:text-4xl md:text-5xl lg:text-[56px] text-white/95 -ml-1">
+      <!-- Subtitle & Main Title matching Figma Reference (2 Distinct Lines) -->
+      <div class="mb-4 max-w-full">
+        <!-- Line 1: Badge Prefix + Script Word (e.g. DISCOVER THE UNDERWATER WONDER of) -->
+        <h2 class="font-sans text-xl sm:text-2xl md:text-3xl lg:text-[42px] xl:text-[46px] tracking-[0.12em] sm:tracking-[0.14em] uppercase font-normal text-white leading-tight flex items-baseline justify-center flex-wrap sm:flex-nowrap gap-x-2 sm:gap-x-3">
+          <span class="whitespace-normal sm:whitespace-nowrap">{{ badgePrefix || t('hero.badge') }}</span>
+          <span class="font-script lowercase font-normal italic tracking-normal text-2xl sm:text-3xl md:text-4xl lg:text-[50px] xl:text-[54px] text-white/95 -ml-1 inline-block">
             {{ scriptWord || t('hero.of') }}
           </span>
         </h2>
-        <h1 class="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-normal tracking-[0.14em] uppercase text-white mt-1 sm:mt-2 leading-tight">
+        <!-- Line 2: Title (e.g. KARIMUNJAWA / CANOE TOUR) -->
+        <h1 class="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-[46px] xl:text-[48px] font-normal tracking-[0.12em] sm:tracking-[0.14em] uppercase text-white mt-1.5 sm:mt-2.5 leading-tight">
           {{ title || t('hero.title') }}
         </h1>
       </div>

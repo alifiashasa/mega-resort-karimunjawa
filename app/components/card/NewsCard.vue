@@ -10,7 +10,7 @@ defineProps<Props>()
 </script>
 
 <template>
-  <article class="bg-white rounded-[22px] overflow-hidden border border-[#E9EAEB]/70 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.07)] transition-all duration-300 group flex flex-col h-[560px] w-full">
+  <article class="bg-white rounded-[22px] overflow-hidden border border-[#E9EAEB]/80 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.07)] transition-all duration-300 group flex flex-col h-full w-full">
     <!-- Thumbnail Image -->
     <div class="relative h-[270px] sm:h-[280px] w-full shrink-0 overflow-hidden bg-gray-100">
       <img

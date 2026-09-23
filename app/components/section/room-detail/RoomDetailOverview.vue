@@ -29,7 +29,7 @@ const handleBooking = () => {
 </script>
 
 <template>
-  <section class="py-16 sm:py-20 lg:py-24 bg-[#FFF9EB]">
+  <section class="pt-8 sm:pt-12 lg:pt-14 pb-8 sm:pb-10 lg:pb-12 bg-[#FFF9EB]">
     <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
       <div class="flex flex-col lg:flex-row items-center lg:items-stretch justify-between gap-8 lg:gap-12 xl:gap-16">
         

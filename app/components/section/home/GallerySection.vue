@@ -137,20 +137,20 @@ const visibleSlides = computed(() => {
       <div class="flex items-center justify-center gap-4 mt-8 sm:mt-10 mb-6">
         <button
           type="button"
-          class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#D5C2A5] bg-transparent hover:bg-white text-[#977E5B] hover:text-[#7d6443] flex items-center justify-center transition-all duration-200 shadow-2xs hover:shadow-xs active:scale-95 cursor-pointer"
+          class="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-[#D5C2A5] bg-[#FAFAFA] hover:bg-white text-[#977E5B] hover:text-[#7d6443] flex items-center justify-center transition-all duration-300 ease-out transform hover:scale-115 active:scale-95 shadow-sm hover:shadow-md cursor-pointer select-none"
           @click="prevSlide"
           aria-label="Previous image"
         >
-          <ChevronLeft class="w-5 h-5" />
+          <ChevronLeft class="w-5 h-5 transition-transform duration-300" />
         </button>
 
         <button
           type="button"
-          class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#D5C2A5] bg-transparent hover:bg-white text-[#977E5B] hover:text-[#7d6443] flex items-center justify-center transition-all duration-200 shadow-2xs hover:shadow-xs active:scale-95 cursor-pointer"
+          class="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-[#D5C2A5] bg-[#FAFAFA] hover:bg-white text-[#977E5B] hover:text-[#7d6443] flex items-center justify-center transition-all duration-300 ease-out transform hover:scale-115 active:scale-95 shadow-sm hover:shadow-md cursor-pointer select-none"
           @click="nextSlide"
           aria-label="Next image"
         >
-          <ChevronRight class="w-5 h-5" />
+          <ChevronRight class="w-5 h-5 transition-transform duration-300" />
         </button>
       </div>
 

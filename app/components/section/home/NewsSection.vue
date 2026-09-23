@@ -4,6 +4,7 @@ import NewsCard from '~/components/card/NewsCard.vue'
 import { ArrowRight } from 'lucide-vue-next'
 
 const { t } = useI18n()
+const localePath = useLocalePath()
 const store = useResortStore()
 
 const newsArticles = computed(() => store.resortData?.news || [])
@@ -39,13 +40,13 @@ const newsArticles = computed(() => store.resortData?.news || [])
         </div>
 
         <!-- Discover More Activities Link -->
-        <a
-          href="#blog"
+        <NuxtLink
+          :to="localePath('/blog')"
           class="font-urbanist text-xs sm:text-sm font-semibold text-[#977E5B] hover:text-[#7A6042] flex items-center gap-1.5 transition-colors group cursor-pointer"
         >
           <span>{{ t('news.discoverMore') }}</span>
           <ArrowRight class="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-        </a>
+        </NuxtLink>
       </div>
     </div>
   </section>

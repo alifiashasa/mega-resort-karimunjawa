@@ -144,5 +144,102 @@
       "amenities": "Amenities",
       "amenitiesDesc": "Equipped with essential amenities to provide convenience."
     }
+  },
+  "facilityPage": {
+    "hero": {
+      "titlePrefix": "ELEVATED COMFORT",
+      "scriptWord": "and",
+      "titleSuffix": "RESORT FACILITIES",
+      "description": "Mega Resort Karimunjawa offers comprehensive facilities designed to elevate your stay, from relaxing water activities and island excursions to comfortable spaces crafted for pure comfort and leisure.",
+      "exploreCta": "Explore Facilities"
+    },
+    "curated": {
+      "badge": "ELEVATED COMFORT, THOUGHTFULLY CURATED",
+      "title": "Elevated Comfort, Thoughtfully Curated",
+      "description": "Enjoy a variety of exclusive amenities designed to enhance your stay, from relaxing water activities and island excursions to comfortable spaces crafted for pure comfort and leisure."
+    },
+    "grid": {
+      "badge": "DISCOVER YOUR COMFORT",
+      "title": "Comfort, Made Better",
+      "description": "Enjoy a variety of exclusive amenities designed to enhance your every moment. From relaxation and adventure to unforgettable culinary experiences on the Karimunjawa coast."
+    }
+  },
+  "galleryPage": {
+    "hero": {
+      "titlePrefix": "CAPTURE THE BEAUTY",
+      "scriptWord": "of",
+      "titleSuffix": "KARIMUNJAWA MOMENTS",
+      "description": "A glimpse into unforgettable memories where every moment feels timeless. Discover serene sunsets and crystal-clear waters captured across Mega Resort Karimunjawa.",
+      "exploreCta": "Explore Mega Resort"
+    },
+    "highlight": {
+      "title": "Highlight Moments of Mega Resort KarimunJawa",
+      "description": "Discover a collection of our featured snapshots through carefully curated visuals. From serene sunrise and sunsets to well-planned ceremonies and dining night, to show our commitment to quality, comfort, and uncompromised luxury."
+    },
+    "grid": {
+      "title": "A Glimpse of Excellence",
+      "description": "A collection of visuals showcasing our best projects and spaces.",
+      "tabViewAll": "View All"
+    },
+    "categories": {
+      "all": "All",
+      "restaurant": "Restaurant",
+      "villa": "Villa",
+      "accomodation": "Accomodation",
+      "facilities": "Facilities"
+    }
+  },
+  "packagePage": {
+    "hero": {
+      "titlePrefix": "CURATED EXPERIENCES",
+      "scriptWord": "for",
+      "titleSuffix": "YOUR ISLAND JOURNEY",
+      "description": "Explore a selection of thoughtfully crafted packages designed to match your travel style. From relaxing escapes to adventurous activities, every experience brings you closer to the beauty of Karimunjawa.",
+      "exploreCta": "Find Your Perfect Stay"
+    },
+    "escape": {
+      "badge": "COMFORTABLE STAY, THOUGHTFULLY DESIGNED",
+      "title": "Find Your Perfect Escape",
+      "description1": "Explore our exclusive packages tailored to suit every kind of traveler. Whether you're seeking a peaceful retreat, a romantic getaway, or exciting island adventures, we have the perfect experience waiting for you.",
+      "description2": "Indulge in a selection of premium packages designed to deliver exceptional comfort and personalized experiences. Each offering combines luxury, nature, and thoughtful details to create a truly memorable stay.",
+      "exploreCta": "Explore Package"
+    },
+    "experience": {
+      "number": "01",
+      "badge": "Package Mega Resort KarimunJawa",
+      "title": "Dive into the heart of Karimunjawa and discover a world of natural wonders",
+      "exploreExperience": "Explore Experience Mega Resort KarimunJawa",
+      "experienceOnAir": "Experience on Air",
+      "categories": {
+        "waterActivity": "Water Activity",
+        "fullDayBoatTour": "Full day Boat Tour",
+        "beginnerDiving": "Beginner Diving",
+        "sertificationDiving": "Sertification Diving",
+        "funDiving": "Fun Diving"
+      }
+    }
+  },
+  "blogPage": {
+    "hero": {
+      "titlePrefix": "STORIES & INSIGHTS",
+      "scriptWord": "from",
+      "titleSuffix": "THE ISLAND",
+      "description": "Explore the latest stories, guides, and island inspirations from the heart of Karimunjawa.",
+      "exploreCta": "Mega Resort Karimunjawa"
+    },
+    "highlights": {
+      "badge": "Insights & Stories",
+      "title": "Latest Highlights from Mega Resort Karimunjawa",
+      "readMore": "Read More"
+    },
+    "stories": {
+      "title": "Moments, Stories & Experiences Worth Sharing",
+      "description": "Stay updated with our newest articles, featuring resort news, travel ideas, and highlights of being present in the Mega Resort experience."
+    },
+    "pagination": {
+      "showing": "Showing",
+      "rows": "rows",
+      "rowsPerPage": "rows per page"
+    }
   }
 }

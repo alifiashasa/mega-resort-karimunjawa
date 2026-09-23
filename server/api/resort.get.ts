@@ -222,6 +222,7 @@ export default defineEventHandler((): ResortData => {
     packages: [
       {
         id: 1,
+        slug: 'stay-package',
         title: 'Stay Package',
         category: 'Stay Package',
         duration: '3 Days',
@@ -251,6 +252,7 @@ export default defineEventHandler((): ResortData => {
       },
       {
         id: 2,
+        slug: 'island-explorer',
         title: 'Island Explorer',
         category: 'Island Explorer',
         duration: '3 Days',
@@ -279,6 +281,7 @@ export default defineEventHandler((): ResortData => {
       },
       {
         id: 3,
+        slug: 'honeymoon-escape',
         title: 'Honeymoon Escape',
         category: 'Honeymoon Escape',
         duration: '4 Days',
@@ -307,6 +310,7 @@ export default defineEventHandler((): ResortData => {
       },
       {
         id: 4,
+        slug: 'diving-adventure',
         title: 'Diving Adventure',
         category: 'Diving Adventure',
         duration: '4 Days',

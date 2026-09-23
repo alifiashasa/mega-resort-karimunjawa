@@ -53,11 +53,11 @@ const amenities = [
 </script>
 
 <template>
-  <section id="amenities" class="py-16 sm:py-20 lg:py-24 bg-[#FFF9EB]">
+  <section id="amenities" class="pt-8 sm:pt-10 lg:pt-12 pb-10 sm:pb-12 lg:pb-14 bg-[#FFF9EB]">
     <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
       
       <!-- Section Header (2-Column Grid) -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start mb-12 sm:mb-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start mb-8 sm:mb-10">
         <!-- Left: Subtitle & Title (Span 7) -->
         <div class="lg:col-span-7 space-y-2">
           <span class="font-opensans text-xs sm:text-[14px] font-normal uppercase tracking-[0.16em] text-[#717680] block">

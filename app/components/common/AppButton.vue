@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import IconSpinner from '~/components/common/icons/IconSpinner.vue'
+
 interface Props {
   variant?: 'primary' | 'outline' | 'dark' | 'ghost' | 'light'
   size?: 'sm' | 'md' | 'lg'

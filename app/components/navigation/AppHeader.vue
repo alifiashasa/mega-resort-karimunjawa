@@ -14,19 +14,39 @@ const isRoomsPage = computed(() => {
   return route.path.includes('/rooms')
 })
 
+const isFacilityPage = computed(() => {
+  return route.path.includes('/facility') || route.path.includes('/facilities')
+})
+
+const isGalleryPage = computed(() => {
+  return route.path.includes('/gallery') || route.path.includes('/galleries')
+})
+
+const isPackagePage = computed(() => {
+  return route.path.includes('/package') || route.path.includes('/packages')
+})
+
+const isBlogPage = computed(() => {
+  return route.path.includes('/blog') || route.path.includes('/blogs')
+})
+
 const activeRoute = computed(() => {
   if (isRoomsPage.value) return 'Rooms'
+  if (isFacilityPage.value) return 'Facility'
+  if (isGalleryPage.value) return 'Gallery'
+  if (isPackagePage.value) return 'Package'
+  if (isBlogPage.value) return 'Blog'
   return 'Home'
 })
 
 const navLinks = computed(() => [
   { name: t('nav.home'), key: 'Home', href: localePath('/') },
   { name: t('nav.rooms'), key: 'Rooms', href: localePath('/rooms') },
-  { name: t('nav.facility'), key: 'Facility', href: localePath('/') + '#about' },
-  { name: t('nav.gallery'), key: 'Gallery', href: localePath('/') + '#gallery' },
-  { name: t('nav.package'), key: 'Package', href: localePath('/') + '#package' },
+  { name: t('nav.facility'), key: 'Facility', href: localePath('/facility') },
+  { name: t('nav.gallery'), key: 'Gallery', href: localePath('/gallery') },
+  { name: t('nav.package'), key: 'Package', href: localePath('/package') },
   { name: t('nav.discover'), key: 'Discover', href: localePath('/') + '#about' },
-  { name: t('nav.blog'), key: 'Blog', href: localePath('/') + '#blog' },
+  { name: t('nav.blog'), key: 'Blog', href: localePath('/blog') },
   { name: t('nav.contactUs'), key: 'Contact Us', href: '#contact' },
   { name: t('nav.faq'), key: 'FAQ', href: '#faq' },
 ])
