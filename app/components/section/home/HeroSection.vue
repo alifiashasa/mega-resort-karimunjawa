@@ -91,7 +91,7 @@ const handleCtaClick = () => {
       </div>
 
       <!-- Description Paragraph -->
-      <p class="font-opensans text-xs sm:text-sm md:text-[15px] lg:text-[16px] text-white/90 leading-relaxed font-normal max-w-4xl mx-auto mb-8 px-2">
+      <p class="font-opensans text-xs sm:text-sm md:text-[15px] lg:text-[20px] text-white/90 leading-relaxed font-normal max-w-5xl xl:max-w-6xl mx-auto mb-8 px-2">
         {{ description || t('hero.description') }}
       </p>
 

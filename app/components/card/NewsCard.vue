@@ -12,14 +12,14 @@ defineProps<Props>()
 <template>
   <article class="bg-white rounded-[22px] overflow-hidden border border-[#E9EAEB]/80 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.07)] transition-all duration-300 group flex flex-col h-full w-full">
     <!-- Thumbnail Image -->
-    <div class="relative h-[270px] sm:h-[280px] w-full shrink-0 overflow-hidden bg-gray-100">
+    <NuxtLink :to="`/blog/${news.id}`" class="relative h-[270px] sm:h-[280px] w-full shrink-0 overflow-hidden bg-gray-100 block cursor-pointer">
       <img
         :src="news.image"
         :alt="news.title"
         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
         loading="lazy"
       />
-    </div>
+    </NuxtLink>
 
     <!-- Content -->
     <div class="p-6 flex flex-col flex-grow justify-between">
@@ -31,9 +31,11 @@ defineProps<Props>()
         </div>
 
         <!-- Title -->
-        <h3 class="font-spartan text-[17px] sm:text-[24px] font-semibold text-[#090C10] group-hover:text-[#977E5B] transition-colors line-clamp-2 leading-snug mb-2.5">
-          {{ news.title }}
-        </h3>
+        <NuxtLink :to="`/blog/${news.id}`" class="block cursor-pointer">
+          <h3 class="font-spartan text-[17px] sm:text-[24px] font-semibold text-[#090C10] group-hover:text-[#977E5B] transition-colors line-clamp-2 leading-snug mb-2.5">
+            {{ news.title }}
+          </h3>
+        </NuxtLink>
 
         <!-- Excerpt -->
         <p class="font-urbanist text-xs sm:text-[18px] text-[#717680] line-clamp-2 leading-relaxed mb-6">

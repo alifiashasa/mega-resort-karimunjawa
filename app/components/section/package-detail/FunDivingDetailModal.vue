@@ -125,7 +125,7 @@ const handleBooking = (item: { name: string; price: string }) => {
     >
       <div
         v-if="modelValue"
-        class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 md:p-6 overflow-y-auto bg-black/60 backdrop-blur-sm"
+        class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 md:p-6 overflow-y-auto bg-black/60 backdrop-blur-sm [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
         @click.self="closeModal"
       >
         <!-- Modal Card Container -->
@@ -153,7 +153,7 @@ const handleBooking = (item: { name: string; price: string }) => {
             </button>
 
             <!-- Scrollable Content -->
-            <div class="overflow-y-auto overscroll-contain flex-1">
+            <div class="overflow-y-auto overscroll-contain flex-1 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
               <!-- Top Banner with Underwater Diver Image & Dark Gradient -->
               <div class="relative w-full h-[250px] sm:h-[280px] bg-[#021024] flex flex-col justify-end overflow-hidden">
                 <img
@@ -166,7 +166,7 @@ const handleBooking = (item: { name: string; price: string }) => {
 
                 <!-- Banner Text Content -->
                 <div class="relative z-10 p-5 sm:p-7 pt-12 text-white">
-                  <h3 class="text-xl sm:text-[24px] lg:text-[26px] font-bold text-white leading-snug mb-2 font-spartan">
+                  <h3 class="text-xl sm:text-[24px] lg:text-[26px] font-semibold text-white leading-snug mb-2 font-spartan">
                     {{ activeData.title }}
                   </h3>
                   <p class="text-xs sm:text-[13.5px] text-white/90 leading-relaxed font-normal max-w-[460px]">
@@ -182,7 +182,7 @@ const handleBooking = (item: { name: string; price: string }) => {
                   <div class="w-7 h-7 flex items-center justify-center text-[#8C7351]">
                     <Clock class="w-5 h-5 stroke-[1.8]" />
                   </div>
-                  <span class="text-xs sm:text-[13px] font-bold text-[#8C7351] mt-1 tracking-tight">Duration</span>
+                  <span class="text-xs sm:text-[13px] font-bold text-[#977E5B] mt-1 tracking-tight">Duration</span>
                   <span class="text-[11px] sm:text-xs text-[#717680] mt-0.5 leading-tight">{{ activeData.duration }}</span>
                 </div>
 
@@ -204,7 +204,7 @@ const handleBooking = (item: { name: string; price: string }) => {
                       <path d="M7 8.5l4.5 2.5 3.5-3" />
                     </svg>
                   </div>
-                  <span class="text-xs sm:text-[13px] font-bold text-[#8C7351] mt-1 tracking-tight">Dive Option</span>
+                  <span class="text-xs sm:text-[13px] font-bold text-[#977E5B] mt-1 tracking-tight">Dive Option</span>
                   <span class="text-[11px] sm:text-xs text-[#717680] mt-0.5 leading-tight">{{ activeData.diveOption }}</span>
                 </div>
 
@@ -213,7 +213,7 @@ const handleBooking = (item: { name: string; price: string }) => {
                   <div class="w-7 h-7 flex items-center justify-center text-[#8C7351]">
                     <UserCheck class="w-5 h-5 stroke-[1.8]" />
                   </div>
-                  <span class="text-xs sm:text-[13px] font-bold text-[#8C7351] mt-1 tracking-tight">Experience</span>
+                  <span class="text-xs sm:text-[13px] font-bold text-[#977E5B] mt-1 tracking-tight">Experience</span>
                   <span class="text-[11px] sm:text-xs text-[#717680] mt-0.5 leading-tight">{{ activeData.experience }}</span>
                 </div>
 
@@ -235,15 +235,15 @@ const handleBooking = (item: { name: string; price: string }) => {
                       <text x="16.5" y="10" font-size="5.5" font-family="sans-serif" font-weight="bold" fill="currentColor" stroke="none">O₂</text>
                     </svg>
                   </div>
-                  <span class="text-xs sm:text-[13px] font-bold text-[#8C7351] mt-1 tracking-tight">Equipment</span>
+                  <span class="text-xs sm:text-[13px] font-bold text-[#977E5B] mt-1 tracking-tight">Equipment</span>
                   <span class="text-[11px] sm:text-xs text-[#717680] mt-0.5 leading-tight">{{ activeData.equipment }}</span>
                 </div>
               </div>
 
               <!-- Dive Pricing Card Container -->
               <div class="p-4 sm:p-6 pb-2">
-                <div class="border border-[#E5E7EB] rounded-[18px] sm:rounded-[20px] p-4 sm:p-5 bg-white shadow-xs">
-                  <h4 class="text-base sm:text-lg lg:text-[19px] font-bold text-[#8C7351] mb-3.5 font-spartan">
+                <div class="border border-[#E5E7EB] rounded-[16px] sm:rounded-[20px] p-4 sm:p-5 bg-white shadow-xs">
+                  <h4 class="text-base sm:text-lg lg:text-[20px] font-semibold text-[#8C7351] mb-3.5 font-spartan">
                     Dive Pricing
                   </h4>
 
@@ -275,14 +275,14 @@ const handleBooking = (item: { name: string; price: string }) => {
                             <path d="M5.5 19a6.5 6.5 0 0 1 13 0" />
                           </svg>
                         </div>
-                        <span class="text-xs sm:text-[14px] font-semibold text-[#1F2937] truncate">
+                        <span class="text-xs sm:text-[14px] font-normal text-[#090C10] truncate">
                           {{ item.name }}
                         </span>
                       </div>
 
                       <!-- Middle: Price -->
                       <div class="text-right whitespace-nowrap">
-                        <span class="text-xs sm:text-[14px] font-bold text-[#111827]">
+                        <span class="text-xs sm:text-[14px] font-bold text-[#090C10]">
                           {{ item.price }}
                         </span>
                         <span class="text-[11px] sm:text-xs text-[#717680] font-normal ml-0.5">
@@ -293,7 +293,8 @@ const handleBooking = (item: { name: string; price: string }) => {
                       <!-- Right: Booking Now Button -->
                       <button
                         type="button"
-                        class="shrink-0 bg-[#8C7351] hover:bg-[#786141] active:scale-95 text-white text-xs sm:text-[13px] font-medium px-4 sm:px-5 py-2 sm:py-2.5 rounded-[10px] shadow-sm transition-all duration-200 cursor-pointer"
+                        class="shrink-0 bg-[#977E5B] hover:opacity-95 text-white text-xs sm:text-[13px] font-medium px-4 sm:px-5 py-2 sm:py-2.5 rounded-[10px] transition-all duration-200 cursor-pointer active:translate-y-[2px]"
+                        style="box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4), 0px 3px 0px 0px #634F33, 0px 0px 0px 1px #856C4A;"
                         @click="handleBooking(item)"
                       >
                         Booking Now
@@ -305,7 +306,7 @@ const handleBooking = (item: { name: string; price: string }) => {
 
               <!-- Bottom "What You'll Experience" Box -->
               <div class="px-4 sm:px-6 pb-5 sm:pb-6">
-                <div class="bg-[#FFF9EB] border border-[#F3E8CE] rounded-[18px] sm:rounded-[20px] p-4 sm:p-5 flex items-start gap-3 sm:gap-4 shadow-xs">
+                <div class="bg-[#FFF9EB] rounded-[18px] sm:rounded-[20px] p-4 sm:p-5 flex items-start gap-3 sm:gap-4">
                   <!-- Island / Palmtree Icon -->
                   <div class="w-7 h-7 shrink-0 text-[#8C7351] flex items-center justify-center mt-0.5">
                     <!-- Island Palm SVG -->
@@ -327,10 +328,10 @@ const handleBooking = (item: { name: string; price: string }) => {
 
                   <!-- Text Details -->
                   <div class="space-y-1">
-                    <h5 class="text-xs sm:text-[14.5px] font-bold text-[#8C7351] font-spartan">
+                    <h5 class="text-xs sm:text-[16px] font-semibold text-[#977E5B]">
                       {{ activeData.experienceNoteTitle }}
                     </h5>
-                    <p class="text-xs sm:text-[12.5px] text-[#6B7280] leading-relaxed font-normal">
+                    <p class="text-xs sm:text-[14px] text-[#717680] leading-relaxed font-normal">
                       {{ activeData.experienceNoteDesc }}
                     </p>
                   </div>
@@ -343,3 +344,18 @@ const handleBooking = (item: { name: string; price: string }) => {
     </Transition>
   </Teleport>
 </template>
+
+<style scoped>
+/* Sembunyikan scrollbar untuk Chrome, Safari, dan Opera */
+div::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Sembunyikan scrollbar untuk IE, Edge, dan Firefox */
+div {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+</style>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ChevronLeft, ChevronRight, ChevronDown } from 'lucide-vue-next'
+import { ChevronLeft, ChevronRight, ChevronDown, ChevronsLeft, ChevronsRight } from 'lucide-vue-next'
 import NewsCard from '~/components/card/NewsCard.vue'
 import type { NewsItem } from '~/types'
 
@@ -293,15 +293,15 @@ const allArticles = computed(() => {
   return defaultBlogArticles
 })
 
-const itemsPerPage = ref(9)
-const currentPage = ref(1)
+const itemsPerPage = ref(18)
+const currentPage = ref(4)
 
 // Total items and pagination calculation
 const totalItems = computed(() => allArticles.value.length)
 
 const totalPages = computed(() => {
   const count = Math.ceil(totalItems.value / itemsPerPage.value)
-  return Math.max(count, 8) // Show 8 pages matching Figma design
+  return Math.max(count, 29) // 29 pages matching reference
 })
 
 // Current page sliced articles
@@ -310,18 +310,9 @@ const paginatedArticles = computed(() => {
   const end = start + itemsPerPage.value
   
   if (start >= allArticles.value.length) {
-    return allArticles.value.slice(0, itemsPerPage.value)
+    return allArticles.value.slice(0, Math.min(itemsPerPage.value, allArticles.value.length))
   }
   return allArticles.value.slice(start, end)
-})
-
-const startRow = computed(() => {
-  if (totalItems.value === 0) return 0
-  return (currentPage.value - 1) * itemsPerPage.value + 1
-})
-
-const endRow = computed(() => {
-  return Math.min(currentPage.value * itemsPerPage.value, totalItems.value)
 })
 
 const goToPage = (page: number) => {
@@ -347,26 +338,46 @@ const nextPage = () => {
   }
 }
 
-// Page numbers list to show
-const visiblePageNumbers = computed(() => {
-  const pages: number[] = []
-  const maxDisplay = Math.min(8, totalPages.value)
-  for (let i = 1; i <= maxDisplay; i++) {
-    pages.push(i)
+// Page numbers list to show (e.g. 1 2 3 4 5 6 7 8 ... 29)
+const visiblePageItems = computed(() => {
+  const total = totalPages.value
+  const current = currentPage.value
+  const items: (number | string)[] = []
+
+  if (total <= 10) {
+    for (let i = 1; i <= total; i++) items.push(i)
+    return items
   }
-  return pages
+
+  if (current <= 5) {
+    for (let i = 1; i <= 8; i++) items.push(i)
+    items.push('...')
+    items.push(total)
+  } else if (current >= total - 4) {
+    items.push(1)
+    items.push('...')
+    for (let i = total - 7; i <= total; i++) items.push(i)
+  } else {
+    items.push(1)
+    items.push('...')
+    for (let i = current - 2; i <= current + 2; i++) items.push(i)
+    items.push('...')
+    items.push(total)
+  }
+
+  return items
 })
 </script>
 
 <template>
-  <section id="blog-stories" class="pt-10 sm:pt-14 pb-20 sm:pb-24 bg-[#FFF9EB]">
+  <section id="blog-stories" class="pt-10 sm:pt-14 pb-20 sm:pb-24 bg-[#FDFDFD]">
     <div class="w-full max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
       <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-        <h2 class="font-spartan text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-semibold text-[#977E5B] tracking-normal leading-tight">
+      <div class="text-center max-w-5xl lg:max-w-6xl mx-auto mb-12 sm:mb-16">
+        <h2 class="font-spartan text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[44px] font-semibold text-[#977E5B] tracking-normal leading-tight">
           {{ t('blogPage.stories.title') }}
         </h2>
-        <p class="font-urbanist text-xs sm:text-sm md:text-[18px] text-[#717680] leading-relaxed mt-3.5 max-w-2xl mx-auto">
+        <p class="font-urbanist text-xs sm:text-sm md:text-[18px] text-[#717680] leading-relaxed mt-3.5 max-w-3xl mx-auto">
           {{ t('blogPage.stories.description') }}
         </p>
       </div>
@@ -380,69 +391,99 @@ const visiblePageNumbers = computed(() => {
         />
       </div>
 
-      <!-- Pagination Toolbar -->
-      <div class="pt-6 border-t border-[#EAE3D2] flex flex-col md:flex-row items-center justify-between gap-5 sm:gap-6 font-urbanist text-xs sm:text-sm text-[#717680]">
-        <!-- Left: Showing rows info -->
-        <div class="font-medium text-[#717680]">
-          <span>{{ t('blogPage.pagination.showing') }} {{ startRow }}-{{ endRow }} {{ t('blogPage.pagination.rows') }}</span>
+      <!-- Pagination Toolbar (Exact match to reference design) -->
+      <div class="pt-4 flex flex-col md:flex-row items-center justify-between gap-5 sm:gap-6 font-opensans text-xs sm:text-[15px] text-[#717680]">
+        <!-- Left: Showing items info -->
+        <div class="font-normal text-[#475467]">
+          <span>Showing 9 items</span>
         </div>
 
         <!-- Center: Numbered pagination controls -->
-        <div class="flex items-center gap-1.5 sm:gap-2">
-          <!-- Prev Button -->
+        <div class="flex items-center gap-1 sm:gap-1.5">
+          <!-- First Page (Double Left Chevron in box) -->
           <button
             type="button"
-            class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg border border-[#D5D7DA] bg-white flex items-center justify-center text-[#535862] hover:bg-[#F9FAFB] hover:text-[#090C10] disabled:opacity-40 disabled:pointer-events-none transition-colors cursor-pointer shadow-2xs"
+            class="w-8 h-8 rounded-[6px] bg-[#EBECEF] text-[#98A2B3] flex items-center justify-center transition-colors disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#E0E2E7] cursor-pointer mr-0.5"
+            :disabled="currentPage === 1"
+            @click="goToPage(1)"
+            aria-label="First Page"
+          >
+            <ChevronsLeft class="w-4 h-4 stroke-[1.75]" />
+          </button>
+
+          <!-- Prev Button (Single Left Chevron) -->
+          <button
+            type="button"
+            class="w-8 h-8 flex items-center justify-center text-[#D4B38A] hover:text-[#977E5B] transition-colors disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
             :disabled="currentPage === 1"
             @click="prevPage"
             aria-label="Previous Page"
           >
-            <ChevronLeft class="w-4 h-4" />
+            <ChevronLeft class="w-4 h-4 stroke-[2]" />
           </button>
 
           <!-- Page Numbers -->
-          <button
-            v-for="pageNum in visiblePageNumbers"
-            :key="pageNum"
-            type="button"
-            class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg font-medium text-xs sm:text-sm flex items-center justify-center transition-all cursor-pointer"
-            :class="[
-              currentPage === pageNum
-                ? 'border border-[#977E5B] bg-[#FFF3D6] text-[#977E5B] font-semibold shadow-2xs'
-                : 'border border-[#D5D7DA] bg-white text-[#535862] hover:bg-[#F9FAFB] hover:text-[#090C10] shadow-2xs'
-            ]"
-            @click="goToPage(pageNum)"
-          >
-            {{ pageNum }}
-          </button>
+          <template v-for="(item, idx) in visiblePageItems" :key="idx">
+            <span
+              v-if="item === '...'"
+              class="w-6 text-center text-[#717680] select-none font-medium text-xs sm:text-[14px]"
+            >
+              ...
+            </span>
+            <button
+              v-else
+              type="button"
+              class="w-8 h-8 rounded-[6px] text-xs sm:text-[14px] flex items-center justify-center transition-all cursor-pointer"
+              :class="[
+                currentPage === item
+                  ? 'bg-[#F7F3EB] text-[#8C6D46] font-bold'
+                  : 'text-[#1D2939] hover:text-[#000] hover:bg-[#F7F3EB]/60 font-semibold'
+              ]"
+              @click="goToPage(Number(item))"
+            >
+              {{ item }}
+            </button>
+          </template>
 
-          <!-- Next Button -->
+          <!-- Next Button (Single Right Chevron) -->
           <button
             type="button"
-            class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg border border-[#D5D7DA] bg-white flex items-center justify-center text-[#535862] hover:bg-[#F9FAFB] hover:text-[#090C10] disabled:opacity-40 disabled:pointer-events-none transition-colors cursor-pointer shadow-2xs"
+            class="w-8 h-8 flex items-center justify-center text-[#D4B38A] hover:text-[#977E5B] transition-colors disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
             :disabled="currentPage === totalPages"
             @click="nextPage"
             aria-label="Next Page"
           >
-            <ChevronRight class="w-4 h-4" />
+            <ChevronRight class="w-4 h-4 stroke-[2]" />
+          </button>
+
+          <!-- Last Page (Double Right Chevron) -->
+          <button
+            type="button"
+            class="w-8 h-8 flex items-center justify-center text-[#D4B38A] hover:text-[#977E5B] transition-colors disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+            :disabled="currentPage === totalPages"
+            @click="goToPage(totalPages)"
+            aria-label="Last Page"
+          >
+            <ChevronsRight class="w-4 h-4 stroke-[1.75]" />
           </button>
         </div>
 
-        <!-- Right: Rows per page selector -->
-        <div class="flex items-center gap-2">
+        <!-- Right: Items per page selector -->
+        <div class="flex items-center gap-2.5">
           <div class="relative inline-flex items-center">
             <select
               v-model="itemsPerPage"
-              class="appearance-none bg-white border border-[#D5D7DA] rounded-lg px-3 py-1.5 pr-8 font-medium text-xs sm:text-sm text-[#090C10] cursor-pointer shadow-2xs focus:outline-hidden focus:border-[#977E5B]"
+              class="appearance-none bg-[#F7F3EB] text-[#8C6D46] font-semibold text-xs sm:text-[14px] rounded-[6px] px-3.5 py-1.5 pr-7 cursor-pointer focus:outline-hidden"
             >
               <option :value="6">6</option>
               <option :value="9">9</option>
               <option :value="12">12</option>
               <option :value="18">18</option>
+              <option :value="24">24</option>
             </select>
-            <ChevronDown class="w-3.5 h-3.5 text-[#717680] absolute right-2.5 pointer-events-none" />
+            <ChevronDown class="w-3.5 h-3.5 text-[#8C6D46] absolute right-2 pointer-events-none stroke-[2.5]" />
           </div>
-          <span class="text-[#717680] font-normal">{{ t('blogPage.pagination.rowsPerPage') }}</span>
+          <span class="text-[#475467] font-normal text-xs sm:text-[14px]">Item per halaman</span>
         </div>
       </div>
     </div>

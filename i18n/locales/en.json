@@ -241,5 +241,75 @@
       "rows": "rows",
       "rowsPerPage": "rows per page"
     }
+  },
+  "discoverPage": {
+    "hero": {
+      "titlePrefix": "DISCOVER THE SOUL",
+      "scriptWord": "of",
+      "titleSuffix": "MEGA RESORT KARIMUNJAWA",
+      "description": "Beyond the destination lies a story of nature, culture, and unforgettable experiences. Discover what makes Karimunjawa a place you’ll always want to return to.",
+      "exploreCta": "Explore Mega Resort"
+    },
+    "islandExperience": {
+      "subtitle": "Explore the Island Experience",
+      "title": "Dive into the heart of Karimunjawa and discover a world of natural wonders and unique experiences."
+    },
+    "journey": {
+      "title": "Journey of Mega Resort KarimunJawa",
+      "description": "From a simple vision to a thriving island destination, discover the journey of Mega Resort Karimunjawa in creating unforgettable experiences, blending nature, comfort, and hospitality in every step.",
+      "milestone1Year": "2016",
+      "milestone1Title": "The Beginning",
+      "milestone1Desc": "Mega Resort Karimunjawa started as a vision to create a serene tropical escape in one of Indonesia's hidden gems. Inspired by the natural beauty of the islands, the journey began with a commitment to preserving its authenticity.",
+      "milestone2Year": "2018",
+      "milestone2Title": "Opening to Guests",
+      "milestone2Desc": "The resort officially welcomed its first guests, offering a unique blend of relaxation, ocean views, and warm hospitality. It quickly became a destination for those seeking a peaceful island getaway.",
+      "milestone3Year": "2018 - Now",
+      "milestone3Title": "A Leading Island Destination",
+      "milestone3Desc": "Today, Mega Resort Karimunjawa stands as a sought-after destination, offering a perfect balance of luxury, nature, and immersive experiences for travelers from around the world."
+    },
+    "map": {
+      "title": "Mega Resort Karimunjawa",
+      "description": "Mega Resort Karimunjawa is located in the Karimunjawa National Park, offering breathtaking views and pristine natural beauty. Accessible by flight or ferry from Semarang or Jepara.",
+      "location": "Pulau Kemujan, Karimunjawa, Kabupaten Jepara"
+    },
+    "transportation": {
+      "badge": "GETTING HERE AND TRANSPORTATION DETAILS",
+      "title": "Find Your Way to Karimunjawa",
+      "description": "Planning your journey to Mega Resort Karimunjawa is simple. We provide comprehensive travel details to ensure your journey is smooth and memorable. Choose from various transport modes that suit your travel style and schedule.",
+      "route1Title": "Semarang — Jepara — Karimunjawa",
+      "route1Subtitle": "(By Land and Fast Boat)",
+      "route1Step1": "From Semarang: Drive to Kartini Port, Jepara (approx. 2 hours by private car, taxi, or shuttle bus).",
+      "route1Step2": "From Jepara: Take Express Bahari fast boat from Kartini Port directly to Karimunjawa Harbor (approx. 2 hours).",
+      "route1Step3": "Resort Transfer: Upon arrival at Karimunjawa Harbor, our private resort team will greet you and transfer you to Mega Resort (approx. 30 mins).",
+      "route2Title": "Semarang — Karimunjawa",
+      "route2Subtitle": "(Direct Fast Boat or Flight)",
+      "route2Step1": "By Air: Direct flight from Ahmad Yani International Airport (SRG) Semarang to Dewadaru Airport Karimunjawa (KWB) (approx. 30 mins).",
+      "route2Step2": "By Sea: Direct fast boat from Tanjung Emas Port Semarang to Karimunjawa (seasonal schedule, approx. 3.5 hours).",
+      "route2Step3": "Resort Transfer: Complimentary airport or harbor transfer directly to Mega Resort.",
+      "route3Title": "Yogyakarta — Karimunjawa",
+      "route3Subtitle": "(Connecting Route)",
+      "route3Step1": "From Yogyakarta: Take a flight or private car transfer to Semarang / Kartini Port Jepara.",
+      "route3Step2": "Connect to Fast Boat / Flight: Board the Express Bahari fast boat from Jepara or flight from Semarang to Karimunjawa.",
+      "route3Step3": "Resort Transfer: Our dedicated team will coordinate your entire transit for a seamless arrival."
+    },
+    "whyChoose": {
+      "badge": "EXPERIENCES THAT MAKE YOUR STAY UNFORGETTABLE",
+      "title": "Why Choose Mega Resort Karimunjawa",
+      "items": {
+        "item1Title": "Natural Beauty",
+        "item1Desc": "Surrounded by pristine turquoise waters, vibrant coral reefs, and lush tropical greenery, our resort offers an intimate connection with untouched nature and spectacular open-sea horizons.",
+        "item2Title": "Exclusive Experience",
+        "item2Desc": "Indulge in private overwater villas, customized boat excursions, and tailored experiences crafted exclusively for our guests with maximum privacy.",
+        "item3Title": "Comfort & Relaxation",
+        "item3Desc": "Experience world-class comfort with premium bedding, oceanfront relaxation lounges, and soothing island breezes that rejuvenate your spirit.",
+        "item4Title": "Friendly Service",
+        "item4Desc": "Our warm and attentive staff is dedicated to anticipating your every need with authentic Indonesian hospitality and heartfelt care."
+      }
+    },
+    "rooms": {
+      "title": "Popular Rooms for Destination On Karimunjawa",
+      "description": "Discover our most sought-after rooms and suites, designed for ultimate comfort and breathtaking views of Karimunjawa's pristine paradise.",
+      "viewAll": "All Room & Suite"
+    }
   }
 }

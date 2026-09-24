@@ -26,17 +26,17 @@ useSeoMeta({
   description: 'Explore the latest stories, travel guides, and island inspirations from the heart of Karimunjawa. Stay updated with our newest articles and moments worth sharing.',
   ogTitle: 'Stories & Insights - Mega Resort Karimunjawa',
   ogDescription: 'Explore the latest stories, travel guides, and island inspirations from the heart of Karimunjawa.',
-  ogImage: '/images/hero-home.jpg',
+  ogImage: '/images/packages/package-escape.jpg',
   twitterCard: 'summary_large_image',
 })
 </script>
 
 <template>
-  <div class="overflow-x-hidden bg-[#FFF9EB]">
+  <div class="overflow-x-hidden bg-[#FDFDFD]">
     <!-- Hero Section -->
     <HeroSection
       id="blog-hero"
-      bg-image="/images/hero-home.jpg"
+      bg-image="/images/packages/package-escape.jpg"
       bg-position="object-center"
       :badge-prefix="t('blogPage.hero.titlePrefix')"
       :script-word="t('blogPage.hero.scriptWord')"

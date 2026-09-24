@@ -10,6 +10,15 @@ const store = useResortStore()
 const isScrolled = ref(false)
 const isMobileMenuOpen = ref(false)
 
+const isBlogDetailPage = computed(() => {
+  const cleanPath = route.path.replace(/^\/(id|en)(\/|$)/, '/')
+  return /^\/blogs?\/.+/.test(cleanPath)
+})
+
+const isLightHeader = computed(() => {
+  return isBlogDetailPage.value
+})
+
 const isRoomsPage = computed(() => {
   return route.path.includes('/rooms')
 })
@@ -26,6 +35,10 @@ const isPackagePage = computed(() => {
   return route.path.includes('/package') || route.path.includes('/packages')
 })
 
+const isDiscoverPage = computed(() => {
+  return route.path.includes('/discover')
+})
+
 const isBlogPage = computed(() => {
   return route.path.includes('/blog') || route.path.includes('/blogs')
 })
@@ -35,6 +48,7 @@ const activeRoute = computed(() => {
   if (isFacilityPage.value) return 'Facility'
   if (isGalleryPage.value) return 'Gallery'
   if (isPackagePage.value) return 'Package'
+  if (isDiscoverPage.value) return 'Discover'
   if (isBlogPage.value) return 'Blog'
   return 'Home'
 })
@@ -45,7 +59,7 @@ const navLinks = computed(() => [
   { name: t('nav.facility'), key: 'Facility', href: localePath('/facility') },
   { name: t('nav.gallery'), key: 'Gallery', href: localePath('/gallery') },
   { name: t('nav.package'), key: 'Package', href: localePath('/package') },
-  { name: t('nav.discover'), key: 'Discover', href: localePath('/') + '#about' },
+  { name: t('nav.discover'), key: 'Discover', href: localePath('/discover') },
   { name: t('nav.blog'), key: 'Blog', href: localePath('/blog') },
   { name: t('nav.contactUs'), key: 'Contact Us', href: '#contact' },
   { name: t('nav.faq'), key: 'FAQ', href: '#faq' },
@@ -72,16 +86,16 @@ onUnmounted(() => {
   <header
     class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 select-none px-5 sm:px-6 md:px-7"
     :class="[
-      isScrolled
-        ? 'glass-nav py-3.5 shadow-xl border-b border-white/10'
-        : 'bg-transparent py-5 sm:py-6'
+      isLightHeader
+        ? (isScrolled ? 'bg-[#FDFDFD]/95 backdrop-blur-md py-3.5 shadow-xs border-b border-gray-100' : 'bg-[#FDFDFD] py-5 sm:py-6')
+        : (isScrolled ? 'glass-nav py-3.5 shadow-xl border-b border-white/10' : 'bg-transparent py-5 sm:py-6')
     ]"
   >
-    <div class="w-full">
+    <div class="w-full max-w-[1480px] mx-auto">
       <div class="flex items-center justify-between">
         <!-- Logo (Stacked with Lotus & Script Karimunjawa) -->
         <NuxtLink to="/" class="flex items-center shrink-0">
-          <ResortLogo variant="light" layout="stacked" size="md" />
+          <ResortLogo :variant="isLightHeader ? 'color' : 'light'" layout="stacked" size="md" />
         </NuxtLink>
 
         <!-- Desktop Nav Links -->
@@ -93,9 +107,13 @@ onUnmounted(() => {
             class="text-[16px] tracking-wide transition-all relative py-1 font-opensans"
             style="font-family: 'Open Sans', sans-serif;"
             :class="[
-              activeRoute === link.key
-                ? 'text-white after:content-[\'\'] after:absolute after:-bottom-1.5 after:-left-2.5 after:-right-2.5 after:h-[1.5px] after:bg-white'
-                : 'text-white/85 hover:text-white'
+              isLightHeader
+                ? (activeRoute === link.key
+                    ? 'text-[#856c4c] font-semibold after:content-[\'\'] after:absolute after:-bottom-1.5 after:-left-2.5 after:-right-2.5 after:h-[2px] after:bg-[#856c4c]'
+                    : 'text-[#717680] hover:text-[#101828]')
+                : (activeRoute === link.key
+                    ? 'text-white after:content-[\'\'] after:absolute after:-bottom-1.5 after:-left-2.5 after:-right-2.5 after:h-[1.5px] after:bg-white'
+                    : 'text-white/85 hover:text-white')
             ]"
           >
             {{ link.name }}
@@ -106,7 +124,7 @@ onUnmounted(() => {
         <div class="hidden lg:flex items-center">
           <button
             type="button"
-            class="h-[48px] px-5 flex items-center justify-center bg-[#977E5B] hover:bg-[#856c4c] active:scale-95 text-white font-opensans text-[16px] font-normal rounded-[16px] tracking-normal transition-all duration-300 cursor-pointer"
+            class="h-[48px] px-6 flex items-center justify-center bg-[#977E5B] hover:bg-[#856c4c] active:scale-95 text-white font-opensans text-[16px] font-normal rounded-[16px] tracking-normal transition-all duration-300 cursor-pointer shadow-xs"
             @click="store.openBookingModal()"
           >
             {{ t('nav.reserveNow') }}
@@ -117,7 +135,8 @@ onUnmounted(() => {
         <div class="flex items-center lg:hidden">
           <button
             type="button"
-            class="p-2 text-white hover:text-[#b98e46] transition-colors"
+            class="p-2 transition-colors"
+            :class="isLightHeader ? 'text-[#101828] hover:text-[#977E5B]' : 'text-white hover:text-[#b98e46]'"
             @click="isMobileMenuOpen = !isMobileMenuOpen"
             aria-label="Toggle menu"
           >
@@ -139,7 +158,8 @@ onUnmounted(() => {
     >
       <div
         v-if="isMobileMenuOpen"
-        class="lg:hidden glass-nav border-t border-white/10 px-6 py-6 mt-3 space-y-4"
+        class="lg:hidden px-6 py-6 mt-3 space-y-4"
+        :class="isLightHeader ? 'bg-white shadow-xl border-t border-gray-100' : 'glass-nav border-t border-white/10'"
       >
         <div class="flex flex-col space-y-3">
           <NuxtLink
@@ -149,8 +169,8 @@ onUnmounted(() => {
             class="text-sm font-medium transition-colors py-1 flex items-center justify-between"
             :class="[
               activeRoute === link.key
-                ? 'text-[#b98e46] font-semibold pl-2 border-l-2 border-[#b98e46]'
-                : 'text-white/90 hover:text-white'
+                ? (isLightHeader ? 'text-[#856c4c] font-semibold pl-2 border-l-2 border-[#856c4c]' : 'text-[#b98e46] font-semibold pl-2 border-l-2 border-[#b98e46]')
+                : (isLightHeader ? 'text-[#717680] hover:text-[#101828]' : 'text-white/90 hover:text-white')
             ]"
             @click="isMobileMenuOpen = false"
           >
@@ -158,10 +178,10 @@ onUnmounted(() => {
           </NuxtLink>
         </div>
 
-        <div class="pt-4 border-t border-white/10">
+        <div class="pt-4 border-t" :class="isLightHeader ? 'border-gray-100' : 'border-white/10'">
           <button
             type="button"
-            class="w-full h-[48px] flex items-center justify-center bg-[#977E5B] hover:bg-[#856c4c] text-white font-opensans text-[16px] font-normal rounded-[16px] tracking-normal transition-all text-center"
+            class="w-full h-[48px] flex items-center justify-center bg-[#977E5B] hover:bg-[#856c4c] text-white font-opensans text-[16px] font-normal rounded-[16px] tracking-normal transition-all text-center cursor-pointer"
             @click="isMobileMenuOpen = false; store.openBookingModal()"
           >
             {{ t('nav.reserveNow') }}

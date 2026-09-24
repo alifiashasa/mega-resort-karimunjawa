@@ -241,5 +241,75 @@
       "rows": "baris",
       "rowsPerPage": "baris per halaman"
     }
+  },
+  "discoverPage": {
+    "hero": {
+      "titlePrefix": "DISCOVER THE SOUL",
+      "scriptWord": "of",
+      "titleSuffix": "MEGA RESORT KARIMUNJAWA",
+      "description": "Beyond the destination lies a story of nature, culture, and unforgettable experiences. Discover what makes Karimunjawa a place you’ll always want to return to.",
+      "exploreCta": "Jelajahi Mega Resort"
+    },
+    "islandExperience": {
+      "subtitle": "Explore the Island Experience",
+      "title": "Menyelami jantung Karimunjawa dan temukan keajaiban alam serta pengalaman istimewa."
+    },
+    "journey": {
+      "title": "Journey of Mega Resort KarimunJawa",
+      "description": "Dari sebuah visi sederhana menjadi destinasi pulau terkemuka, temukan perjalanan Mega Resort Karimunjawa dalam menghadirkan pengalaman tak terlupakan, memadukan alam, kenyamanan, dan keramahan dalam setiap langkah.",
+      "milestone1Year": "2016",
+      "milestone1Title": "The Beginning",
+      "milestone1Desc": "Mega Resort Karimunjawa dimulai dari visi menciptakan suaka tropis yang tenang di salah satu surga tersembunyi Indonesia. Terinspirasi oleh keindahan alam kepulauan, perjalanan dimulai dengan komitmen untuk menjaga keasliannya.",
+      "milestone2Year": "2018",
+      "milestone2Title": "Opening to Guests",
+      "milestone2Desc": "Resort secara resmi menyambut tamu perdananya, menawarkan perpaduan unik antara relaksasi, pemandangan laut lepas, dan keramahan hangat. Menjadi destinasi pilihan bagi mereka yang mencari liburan pulau yang damai.",
+      "milestone3Year": "2018 - Now",
+      "milestone3Title": "A Leading Island Destination",
+      "milestone3Desc": "Kini, Mega Resort Karimunjawa berdiri sebagai destinasi utama, menawarkan keseimbangan sempurna antara kemewahan, alam, dan pengalaman berkesan bagi para pelancong dari seluruh dunia."
+    },
+    "map": {
+      "title": "Mega Resort Karimunjawa",
+      "description": "Mega Resort Karimunjawa terletak di Taman Nasional Karimunjawa, menyajikan pemandangan spektakuler dan keasrian alam yang murni. Dapat diakses dengan penerbangan atau kapal cepat dari Semarang atau Jepara.",
+      "location": "Pulau Kemujan, Karimunjawa, Kabupaten Jepara"
+    },
+    "transportation": {
+      "badge": "PANDUAN PERJALANAN DAN DETAIL TRANSPORTASI",
+      "title": "Rute Menuju Karimunjawa",
+      "description": "Merencanakan perjalanan Anda ke Mega Resort Karimunjawa sangatlah mudah. Kami menyediakan panduan perjalanan lengkap untuk memastikan perjalanan Anda lancar dan berkesan. Pilih dari berbagai moda transportasi yang sesuai dengan gaya dan jadwal perjalanan Anda.",
+      "route1Title": "Semarang — Jepara — Karimunjawa",
+      "route1Subtitle": "(Jalur Darat dan Kapal Cepat)",
+      "route1Step1": "Dari Semarang: Berkendara menuju Pelabuhan Kartini, Jepara (sekitar 2 jam dengan mobil pribadi, taksi, atau shuttle bus).",
+      "route1Step2": "Dari Jepara: Naik kapal cepat Express Bahari dari Pelabuhan Kartini langsung ke Pelabuhan Karimunjawa (sekitar 2 jam).",
+      "route1Step3": "Penjemputan Resort: Setibanya di Pelabuhan Karimunjawa, tim resort kami siap menyambut dan mengantar Anda ke Mega Resort (sekitar 30 menit).",
+      "route2Title": "Semarang — Karimunjawa",
+      "route2Subtitle": "(Kapal Cepat Langsung atau Pesawat)",
+      "route2Step1": "Jalur Udara: Penerbangan langsung dari Bandara Internasional Ahmad Yani (SRG) Semarang ke Bandara Dewadaru Karimunjawa (KWB) (sekitar 30 menit).",
+      "route2Step2": "Jalur Laut: Kapal cepat langsung dari Pelabuhan Tanjung Emas Semarang ke Karimunjawa (jadwal musiman, sekitar 3,5 jam).",
+      "route2Step3": "Penjemputan Resort: Layanan antar-jemput gratis dari bandara atau pelabuhan langsung ke Mega Resort.",
+      "route3Title": "Yogyakarta — Karimunjawa",
+      "route3Subtitle": "(Rute Penghubung)",
+      "route3Step1": "Dari Yogyakarta: Perjalanan penerbangan atau mobil pribadi menuju Semarang / Pelabuhan Kartini Jepara.",
+      "route3Step2": "Lanjut Kapal / Pesawat: Naik kapal cepat Express Bahari dari Jepara atau pesawat dari Semarang ke Karimunjawa.",
+      "route3Step3": "Penjemputan Resort: Tim kami siap mengoordinasikan seluruh transit Anda untuk kedatangan yang mulus."
+    },
+    "whyChoose": {
+      "badge": "PENGALAMAN YANG MEMBUAT LIBURAN ANDA TAK TERLUPAKAN",
+      "title": "Mengapa Memilih Mega Resort Karimunjawa",
+      "items": {
+        "item1Title": "Keindahan Alam",
+        "item1Desc": "Dikelilingi oleh perairan toska yang jernih, terumbu karang hidup, dan rimbunnya alam tropis, resort kami menawarkan koneksi intim dengan alam bebas dan pemandangan laut lepas.",
+        "item2Title": "Pengalaman Eksklusif",
+        "item2Desc": "Nikmati villa apung pribadi, tur perahu khusus, dan pengalaman yang dirancang eksklusif dengan privasi maksimal bagi para tamu kami.",
+        "item3Title": "Kenyamanan & Relaksasi",
+        "item3Desc": "Rasakan kenyamanan kelas dunia dengan tempat tidur premium, lounge santai di tepi laut, dan semilir angin pulau yang menyegarkan jiwa.",
+        "item4Title": "Pelayanan Ramah & Hangat",
+        "item4Desc": "Staf kami yang ramah dan penuh perhatian siap melayani setiap kebutuhan Anda dengan keramahan khas Indonesia yang tulus dari hati."
+      }
+    },
+    "rooms": {
+      "title": "Kamar Populer untuk Destinasi di Karimunjawa",
+      "description": "Temukan kamar dan suite pilihan terbaik kami, dirancang untuk kenyamanan maksimal dan pemandangan surga tropis Karimunjawa yang menakjubkan.",
+      "viewAll": "Semua Kamar & Suite"
+    }
   }
 }
