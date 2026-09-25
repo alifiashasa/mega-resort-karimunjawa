@@ -15,9 +15,9 @@ const siteMapLinks = computed(() => [
   { name: 'Facility', href: localePath('/facility') },
   { name: 'Gallery', href: localePath('/gallery') },
   { name: 'Package', href: localePath('/package') },
-  { name: 'Discover', href: localePath('/') + '#about' },
+  { name: 'Discover', href: localePath('/discover') },
   { name: 'Blog', href: localePath('/blog') },
-  { name: 'Contact Us', href: '#contact' },
+  { name: 'Contact Us', href: localePath('/contact') },
   { name: 'FAQ', href: '#faq' },
 ])
 

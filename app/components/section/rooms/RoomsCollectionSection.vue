@@ -25,11 +25,11 @@ const handleViewRoom = (room: RoomItem) => {
 </script>
 
 <template>
-  <section id="collection" class="py-16 sm:py-20 lg:py-24 bg-[#FAFAFA]">
+  <section id="collection" class="py-10 sm:py-12 lg:py-14 bg-[#FAFAFA]">
     <div class="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
       
       <!-- 2-Column Header -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-end mb-12 sm:mb-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-end mb-8 sm:mb-10">
         <!-- Left: Badge & Title (Span 7) -->
         <div class="lg:col-span-7 space-y-2.5">
           <span class="font-urbanist text-xs sm:text-[16px] font-normal uppercase tracking-[0.18em] text-[#717680] block">

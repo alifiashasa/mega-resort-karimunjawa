@@ -23,11 +23,11 @@ const galleryImages = [
 </script>
 
 <template>
-  <section id="island-experience" class="py-14 sm:py-18 lg:py-20 bg-[#FFF9EB]">
+  <section id="island-experience" class="py-10 sm:py-12 lg:py-14 bg-[#FFF9EB]">
     <div class="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
       
       <!-- Top Lotus Leaf Emblem with Horizontal Divider Line -->
-      <div class="flex items-center gap-6 mb-10 sm:mb-12">
+      <div class="flex items-center gap-6 mb-6 sm:mb-8">
         <div class="w-10 h-7 sm:w-11 sm:h-8 shrink-0">
           <IconLotus fill-color="#977E5B" class-name="w-full h-full" />
         </div>
@@ -35,7 +35,7 @@ const galleryImages = [
       </div>
 
       <!-- Two-Column Narrative Header -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start mb-12 sm:mb-14">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start mb-8 sm:mb-10">
         <!-- Left Subheading -->
         <div class="lg:col-span-5">
           <h3 class="font-spartan text-lg sm:text-xl lg:text-[30px] font-normal text-[#090C10] leading-snug">

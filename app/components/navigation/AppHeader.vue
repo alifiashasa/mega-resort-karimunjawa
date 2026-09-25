@@ -15,8 +15,12 @@ const isBlogDetailPage = computed(() => {
   return /^\/blogs?\/.+/.test(cleanPath)
 })
 
+const isContactPage = computed(() => {
+  return route.path.includes('/contact')
+})
+
 const isLightHeader = computed(() => {
-  return isBlogDetailPage.value
+  return isBlogDetailPage.value || isContactPage.value
 })
 
 const isRoomsPage = computed(() => {
@@ -50,6 +54,7 @@ const activeRoute = computed(() => {
   if (isPackagePage.value) return 'Package'
   if (isDiscoverPage.value) return 'Discover'
   if (isBlogPage.value) return 'Blog'
+  if (isContactPage.value) return 'Contact Us'
   return 'Home'
 })
 
@@ -61,7 +66,7 @@ const navLinks = computed(() => [
   { name: t('nav.package'), key: 'Package', href: localePath('/package') },
   { name: t('nav.discover'), key: 'Discover', href: localePath('/discover') },
   { name: t('nav.blog'), key: 'Blog', href: localePath('/blog') },
-  { name: t('nav.contactUs'), key: 'Contact Us', href: '#contact' },
+  { name: t('nav.contactUs'), key: 'Contact Us', href: localePath('/contact') },
   { name: t('nav.faq'), key: 'FAQ', href: '#faq' },
 ])
 
@@ -87,8 +92,8 @@ onUnmounted(() => {
     class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 select-none px-5 sm:px-6 md:px-7"
     :class="[
       isLightHeader
-        ? (isScrolled ? 'bg-[#FDFDFD]/95 backdrop-blur-md py-3.5 shadow-xs border-b border-gray-100' : 'bg-[#FDFDFD] py-5 sm:py-6')
-        : (isScrolled ? 'glass-nav py-3.5 shadow-xl border-b border-white/10' : 'bg-transparent py-5 sm:py-6')
+        ? 'bg-white py-5 sm:py-6'
+        : (isScrolled ? 'glass-nav py-3.5' : 'bg-transparent py-5 sm:py-6')
     ]"
   >
     <div class="w-full max-w-[1480px] mx-auto">

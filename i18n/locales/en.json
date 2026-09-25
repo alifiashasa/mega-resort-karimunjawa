@@ -268,48 +268,78 @@
       "milestone3Desc": "Today, Mega Resort Karimunjawa stands as a sought-after destination, offering a perfect balance of luxury, nature, and immersive experiences for travelers from around the world."
     },
     "map": {
-      "title": "Mega Resort Karimunjawa",
-      "description": "Mega Resort Karimunjawa is located in the Karimunjawa National Park, offering breathtaking views and pristine natural beauty. Accessible by flight or ferry from Semarang or Jepara.",
-      "location": "Pulau Kemujan, Karimunjawa, Kabupaten Jepara"
+      "title": "Mega Resort KarimunJawa",
+      "description": "Mega Resort Karimunjawa is located in the heart of the Karimunjawa archipelago, a tropical paradise off the northern coast of Central Java, Indonesia.",
+      "locationLabel": "Lokasi : ",
+      "location": "5GR5+F7C, Kemujan, Karimunjawa, Kabupaten Jepara, Jawa Tengah",
+      "locationUrl": "https://maps.google.com/?q=5GR5%2BF7C,+Kemujan,+Karimunjawa,+Kabupaten+Jepara,+Jawa+Tengah"
     },
     "transportation": {
-      "badge": "GETTING HERE AND TRANSPORTATION DETAILS",
+      "caption": "Sit back, relax, and let paradise welcome you.",
       "title": "Find Your Way to Karimunjawa",
-      "description": "Planning your journey to Mega Resort Karimunjawa is simple. We provide comprehensive travel details to ensure your journey is smooth and memorable. Choose from various transport modes that suit your travel style and schedule.",
-      "route1Title": "Semarang — Jepara — Karimunjawa",
-      "route1Subtitle": "(By Land and Fast Boat)",
-      "route1Step1": "From Semarang: Drive to Kartini Port, Jepara (approx. 2 hours by private car, taxi, or shuttle bus).",
-      "route1Step2": "From Jepara: Take Express Bahari fast boat from Kartini Port directly to Karimunjawa Harbor (approx. 2 hours).",
-      "route1Step3": "Resort Transfer: Upon arrival at Karimunjawa Harbor, our private resort team will greet you and transfer you to Mega Resort (approx. 30 mins).",
-      "route2Title": "Semarang — Karimunjawa",
-      "route2Subtitle": "(Direct Fast Boat or Flight)",
-      "route2Step1": "By Air: Direct flight from Ahmad Yani International Airport (SRG) Semarang to Dewadaru Airport Karimunjawa (KWB) (approx. 30 mins).",
-      "route2Step2": "By Sea: Direct fast boat from Tanjung Emas Port Semarang to Karimunjawa (seasonal schedule, approx. 3.5 hours).",
-      "route2Step3": "Resort Transfer: Complimentary airport or harbor transfer directly to Mega Resort.",
-      "route3Title": "Yogyakarta — Karimunjawa",
-      "route3Subtitle": "(Connecting Route)",
-      "route3Step1": "From Yogyakarta: Take a flight or private car transfer to Semarang / Kartini Port Jepara.",
-      "route3Step2": "Connect to Fast Boat / Flight: Board the Express Bahari fast boat from Jepara or flight from Semarang to Karimunjawa.",
-      "route3Step3": "Resort Transfer: Our dedicated team will coordinate your entire transit for a seamless arrival."
+      "description": "From city streets to island breeze, your trip to Mega Resort Karimunjawa is part of the experience. Discover travel options, routes, and tips to make your journey smooth and memorable.",
+      "route1Title": "Semarang → Jepara → Karimunjawa",
+      "route1Subtitle": "By Car + Ferry / Speedboat",
+      "route1Step1": "Begin your journey from Semarang to Kartini Port in Jepara by private car, shuttle, or bus.",
+      "route1Step2": "From Jepara, continue to Karimunjawa by ferry while enjoying scenic views of the Java Sea.",
+      "route1Step3": "After arriving in Karimunjawa, travel to Batu Putih (approximately 40 minutes from the harbor), where a complimentary shuttle boat will transfer you to Grand Mega Diving Resort.",
+      "route2Title": "Semarang → Karimunjawa",
+      "route2Subtitle": "By Airplane Susi Air",
+      "route2Step1": "Fly directly from Semarang to Dewadaru Airport in Karimunjawa, the fastest and most convenient travel option.",
+      "route2Step2": "From the airport, continue your journey to Batu Putih, where our complimentary shuttle boat will take you directly to Grand Mega Diving Resort.",
+      "route2Step3": "The shuttle boat service is available only from Batu Putih to the resort.",
+      "route3Title": "Yogyakarta → Karimunjawa",
+      "route3Subtitle": "By Airplane Susi Air",
+      "route3Step1": "Fly directly from Yogyakarta to Dewadaru Airport in Karimunjawa, the fastest and most convenient travel option.",
+      "route3Step2": "Continue to Batu Putih before boarding the resort shuttle boat. Our complimentary shuttle boat transfer is provided exclusively from Batu Putih to Grand Mega Diving Resort.",
+      "route3Step3": "The shuttle boat service is available only from Batu Putih to the resort."
     },
     "whyChoose": {
-      "badge": "EXPERIENCES THAT MAKE YOUR STAY UNFORGETTABLE",
+      "badge": "Discover what makes your stay truly unforgettable",
       "title": "Why Choose Mega Resort Karimunjawa",
       "items": {
         "item1Title": "Natural Beauty",
-        "item1Desc": "Surrounded by pristine turquoise waters, vibrant coral reefs, and lush tropical greenery, our resort offers an intimate connection with untouched nature and spectacular open-sea horizons.",
+        "item1Desc": "Enjoy the pristine natural beauty of Karimunjawa with white sandy beaches, crystal-clear seawater, and a serene atmosphere far from the crowds.",
         "item2Title": "Exclusive Experience",
-        "item2Desc": "Indulge in private overwater villas, customized boat excursions, and tailored experiences crafted exclusively for our guests with maximum privacy.",
+        "item2Desc": "Enjoy an exclusive stay with high privacy, premium amenities, and a tranquil atmosphere for ultimate comfort.",
         "item3Title": "Comfort & Relaxation",
-        "item3Desc": "Experience world-class comfort with premium bedding, oceanfront relaxation lounges, and soothing island breezes that rejuvenate your spirit.",
+        "item3Desc": "Experience complete relaxation with peaceful island vibes, soothing ocean waves, and top-notch comfort.",
         "item4Title": "Friendly Service",
-        "item4Desc": "Our warm and attentive staff is dedicated to anticipating your every need with authentic Indonesian hospitality and heartfelt care."
+        "item4Desc": "Receive warm, friendly, and attentive service from our staff dedicated to making your stay memorable."
       }
     },
     "rooms": {
-      "title": "Popular Rooms for Destination On Karimunjawa",
-      "description": "Discover our most sought-after rooms and suites, designed for ultimate comfort and breathtaking views of Karimunjawa's pristine paradise.",
-      "viewAll": "All Room & Suite"
+      "title": "Popular Rooms for Destination On KarimunJawa",
+      "description": "Discover curated stays and experiences in Karimunjawa — from relaxing beachfront accommodations to exciting island activities, all designed for a seamless tropical getaway.",
+      "viewAll": "All Package Rooms"
+    }
+  },
+  "contactPage": {
+    "badge": "Get in Touch",
+    "title": "We’re Here to Help You Plan Your Perfect Stay",
+    "description": "Have questions or need help planning your trip to Mega Resort Karimunjawa? Our team is ready to assist you with everything from reservations and transportation to your stay. Feel free to contact us anytime.",
+    "sideTitle": "Beauty of Mega Resort Karimun Jawa",
+    "sideDescription": "Nestled within the breathtaking waters of the Karimunjawa archipelago, Mega Resort Karimunjawa",
+    "form": {
+      "nameLabel": "Nama Lengkap",
+      "namePlaceholder": "Masukkan nama lengkap Anda",
+      "emailLabel": "Alamat Email",
+      "emailPlaceholder": "contoh{'@'}email.com",
+      "messageLabel": "Label",
+      "messageOptional": "(Opsional)",
+      "messagePlaceholder": "Tuliskan pertanyaan atau kendala Anda di sini...",
+      "submit": "Submit",
+      "submitting": "Submitting...",
+      "successMessage": "Your message has been sent successfully! Our team will reach out to you shortly."
+    },
+    "info": {
+      "addressTitle": "Our Address",
+      "addressContent": "5GR5+F7C, Kemujan, Karimunjawa, Kabupaten Jepara, Jawa Tengah",
+      "contactTitle": "Contact Us",
+      "phone": "088-xxx-xxxx",
+      "email": "Megaresort{'@'}gmail.com",
+      "instagram": "{'@'}megaresortkarimunjawa",
+      "tiktok": "{'@'}megaresortkarimunjawa"
     }
   }
 }

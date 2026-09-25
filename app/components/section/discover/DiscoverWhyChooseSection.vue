@@ -28,67 +28,67 @@ const toggleIndex = (idx: number) => {
 </script>
 
 <template>
-  <section id="why-choose" class="py-16 sm:py-20 lg:py-24 bg-[#FFF9EB]">
+  <section id="why-choose" class="py-10 sm:py-12 lg:py-14 bg-[#FFF9EB]">
     <div class="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
       
       <!-- Section Header (Centered) -->
-      <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-        <span class="font-urbanist text-xs sm:text-sm font-semibold uppercase tracking-[0.16em] text-[#717680] block mb-3">
+      <div class="text-center max-w-4xl mx-auto mb-8 sm:mb-10">
+        <p class="font-urbanist text-xs sm:text-sm md:text-[18px] font-medium text-[#717680] block mb-2 sm:mb-3">
           {{ t('discoverPage.whyChoose.badge') }}
-        </span>
-        <h2 class="font-spartan text-2xl sm:text-3xl lg:text-[42px] font-bold text-[#977E5B] leading-tight">
+        </p>
+        <h2 class="font-spartan text-2xl sm:text-3xl lg:text-[48px] font-semibold text-[#977E5B] leading-tight">
           {{ t('discoverPage.whyChoose.title') }}
         </h2>
       </div>
 
       <!-- Content Grid: Left Tabs / Right Photo Collage -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
         
         <!-- Left: Interactive Feature Accordion/List -->
-        <div class="lg:col-span-5 space-y-4">
+        <div class="lg:col-span-5 flex flex-col">
           <div
             v-for="(item, idx) in features"
             :key="idx"
-            class="transition-all duration-300 cursor-pointer rounded-[12px] p-4 sm:p-5"
+            class="transition-all duration-300 cursor-pointer pl-6 sm:pl-8 border-l-[3.5px]"
             :class="[
               activeIndex === idx
-                ? 'bg-[#f4eee3] border-l-4 border-[#8C704E] shadow-xs'
-                : 'hover:bg-[#f4eee3]/60 border-l-4 border-transparent'
+                ? 'border-[#977E5B]'
+                : 'border-[#E2E8F0]',
+              idx !== features.length - 1 ? 'pb-6 sm:pb-8' : 'pb-0'
             ]"
             @click="toggleIndex(idx)"
           >
             <h3
-              class="font-spartan text-lg sm:text-xl font-bold transition-colors"
-              :class="activeIndex === idx ? 'text-[#8C704E]' : 'text-[#29241f]'"
+              class="font-spartan text-xl sm:text-[36px] font-semibold transition-colors select-none text-[#977E5B]"
+              :class="activeIndex === idx ? 'opacity-100' : 'opacity-90 hover:opacity-100'"
             >
               {{ item.title }}
             </h3>
             
-            <!-- Description visible when active -->
-            <Transition
-              enter-active-class="transition duration-300 ease-out"
-              enter-from-class="opacity-0 -translate-y-2"
-              enter-to-class="opacity-100 translate-y-0"
-              leave-active-class="transition duration-200 ease-in"
-              leave-from-class="opacity-100 translate-y-0"
-              leave-to-class="opacity-0 -translate-y-2"
+            <!-- Description visible when active with smooth CSS Grid height animation -->
+            <div
+              class="grid transition-[grid-template-rows,opacity] duration-500 ease-in-out"
+              :class="[
+                activeIndex === idx
+                  ? 'grid-rows-[1fr] opacity-100'
+                  : 'grid-rows-[0fr] opacity-0 pointer-events-none'
+              ]"
             >
-              <p
-                v-if="activeIndex === idx"
-                class="font-opensans text-xs sm:text-sm text-[#717680] leading-relaxed mt-2"
-              >
-                {{ item.description }}
-              </p>
-            </Transition>
+              <div class="overflow-hidden">
+                <p class="font-urbanist text-sm sm:text-[20px] text-[#717680] leading-relaxed pt-2.5 sm:pt-3 max-w-xl">
+                  {{ item.description }}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Right: 3-Image Collage -->
-        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 items-stretch">
+        <div class="lg:col-span-7 flex flex-col sm:flex-row gap-4 sm:gap-6 items-stretch justify-end">
           <!-- Left Column (2 Stacked Photos) -->
-          <div class="flex flex-col gap-4 sm:gap-6 justify-between">
+          <div class="flex flex-col gap-4 sm:gap-6 justify-between w-full sm:w-1/2 lg:w-auto lg:flex-1 lg:h-[512px]">
             <!-- Top: Snorkeling Coral Reef -->
-            <div class="relative h-[200px] sm:h-[220px] rounded-[16px] overflow-hidden shadow-md group bg-[#e8dfd3]">
+            <div class="relative w-[296px] h-[200px] sm:h-[210px] lg:h-[244px] rounded-[16px] overflow-hidden shadow-xs group bg-[#e8dfd3]">
               <img
                 src="/images/gallery/card-snorkeling.webp"
                 alt="Snorkeling at Karimunjawa coral reef"
@@ -98,7 +98,7 @@ const toggleIndex = (idx: number) => {
             </div>
 
             <!-- Bottom: Romantic Candlelight Dinner -->
-            <div class="relative h-[200px] sm:h-[220px] rounded-[16px] overflow-hidden shadow-md group bg-[#e8dfd3]">
+            <div class="relative w-full h-[200px] sm:h-[210px] lg:h-[244px] rounded-[16px] overflow-hidden shadow-xs group bg-[#e8dfd3]">
               <img
                 src="/images/discover/discover-dinner.jpg"
                 alt="Romantic candlelight dinner on the dock"
@@ -108,8 +108,8 @@ const toggleIndex = (idx: number) => {
             </div>
           </div>
 
-          <!-- Right Column (1 Tall Panoramic Pier Photo) -->
-          <div class="relative h-[260px] sm:h-[464px] rounded-[16px] overflow-hidden shadow-md group bg-[#e8dfd3]">
+          <!-- Right Column (1 Tall Panoramic Pier Photo - 485px x 512px) -->
+          <div class="relative w-full sm:w-1/2 lg:w-[485px] h-[320px] sm:h-[440px] lg:h-[512px] shrink-0 rounded-[16px] overflow-hidden shadow-xs group bg-[#e8dfd3]">
             <img
               src="/images/discover/discover-pier.jpg"
               alt="Long wooden pier leading to overwater bungalows"

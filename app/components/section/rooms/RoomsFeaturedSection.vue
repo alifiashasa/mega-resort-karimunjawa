@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useResortStore } from '~/stores/resortStore'
-import SectionBadge from '~/components/common/SectionBadge.vue'
 import RoomFeaturedCard from '~/components/card/RoomFeaturedCard.vue'
 import type { RoomItem } from '~/types'
 
@@ -23,11 +22,11 @@ const handleSelectRoom = (room: RoomItem) => {
 </script>
 
 <template>
-  <section id="featured-rooms" class="py-16 sm:py-20 lg:py-24 bg-[#FAFAFA]">
+  <section id="featured-rooms" class="py-10 sm:py-12 lg:py-14 bg-[#FAFAFA]">
     <div class="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
       
       <!-- Section Header -->
-      <div class="text-center max-w-7xl mx-auto mb-14 sm:mb-20">
+      <div class="text-center max-w-7xl mx-auto mb-8 sm:mb-10">
         <!-- Badge -->
         <span class="font-urbanist text-xs sm:text-[16px] font-normal uppercase tracking-[0.18em] text-[#717680] block mb-4 sm:mb-3">
           {{ t('roomsPage.featured.badge') }}
@@ -44,13 +43,12 @@ const handleSelectRoom = (room: RoomItem) => {
         </p>
       </div>
 
-      <!-- 3-Column Cards Grid with Elevated Center Card (Bottom aligned) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-8 xl:gap-10 items-end justify-center">
+      <!-- 3-Column Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-8 xl:gap-10 items-start justify-center">
         <RoomFeaturedCard
-          v-for="(room, idx) in featuredRooms"
+          v-for="room in featuredRooms"
           :key="room.id"
           :room="room"
-          :is-center="idx === 1"
           @select="handleSelectRoom"
         />
       </div>
@@ -58,4 +56,3 @@ const handleSelectRoom = (room: RoomItem) => {
     </div>
   </section>
 </template>
-
