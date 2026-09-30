@@ -170,7 +170,7 @@ defineExpose({
 </script>
 
 <template>
-  <section id="glimpse-excellence" class="py-16 sm:py-20 lg:py-24 bg-[#FFF9EB] select-none scroll-mt-20">
+  <section id="glimpse-excellence" class="pt-6 sm:pt-8 lg:pt-10 pb-16 sm:pb-20 lg:pb-24 bg-[#FFF9EB] select-none scroll-mt-20">
     <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <!-- Section Heading -->
       <h2
@@ -181,13 +181,13 @@ defineExpose({
 
       <!-- Description Paragraph -->
       <p
-        class="font-opensans text-sm sm:text-[15px] lg:text-[16px] text-[#717680] max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-10 font-normal px-2"
+        class="font-opensans text-sm sm:text-[15px] lg:text-[16px] text-[#717680] max-w-3xl mx-auto leading-relaxed mb-6 sm:mb-8 font-normal px-2"
       >
         {{ t('galleryPage.grid.description') }}
       </p>
 
       <!-- Category Filter Tabs -->
-      <div class="flex items-center justify-center flex-wrap gap-4 sm:gap-8 mb-10 sm:mb-14">
+      <div class="flex items-center justify-center flex-wrap gap-4 sm:gap-8 mb-8 sm:mb-10">
         <button
           v-for="cat in categories"
           :key="cat"

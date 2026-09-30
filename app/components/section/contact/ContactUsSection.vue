@@ -51,10 +51,10 @@ const handleSubmit = async () => {
 
         <!-- Overlay Teks di bagian bawah banner -->
         <div class="relative z-10 p-6 sm:p-7 md:p-6 lg:p-7 xl:p-8 text-white w-full pr-3 sm:pr-4 md:pr-5">
-          <h2 class="text-2xl sm:text-3xl xl:text-[46px] font-semibold leading-tight mb-3 tracking-normal text-white font-spartan w-full">
+          <h2 class="text-2xl sm:text-3xl xl:text-[44px] font-semibold leading-tight mb-3 tracking-normal text-white font-spartan w-full">
             Beauty of Mega Resort Karimun Jawa
           </h2>
-          <p class="text-white/90 text-xs sm:text-[20px] xl:text-[14px] leading-relaxed w-full font-normal font-sans">
+          <p class="text-white/90 text-xs sm:text-[16px] xl:text-[20px] leading-relaxed w-full font-normal font-sans">
             Nestled within the breathtaking waters of the Karimunjawa archipelago, Mega Resort Karimunjawa
           </p>
         </div>

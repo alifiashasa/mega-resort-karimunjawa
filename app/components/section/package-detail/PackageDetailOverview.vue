@@ -89,8 +89,7 @@ const handleBooking = () => {
           <div class="pt-4 lg:pt-0">
             <button
               type="button"
-              class="h-[44px] sm:h-[48px] px-8 sm:px-9 inline-flex items-center justify-center text-white font-opensans text-xs sm:text-[14px] font-medium rounded-[12px] sm:rounded-[14px] tracking-wide transition-all duration-200 cursor-pointer active:translate-y-[2px] hover:opacity-95 shadow-md"
-              style="background-color: #8C7351; box-shadow: inset 0px 1.5px 0px 0px rgba(255, 255, 255, 0.4), 0px 4px 0px 0px #5E4C33, 0px 0px 0px 1px #7D6646;"
+              class="h-[44px] sm:h-[48px] px-8 sm:px-9 inline-flex items-center justify-center text-white font-opensans text-xs sm:text-[14px] font-medium rounded-[12px] sm:rounded-[14px] tracking-wide transition-all duration-200 cursor-pointer active:scale-[0.99] bg-[#937A54] hover:bg-[#886F4A] border border-[#6D532F]/50 shadow-[inset_0_1.5px_1px_rgba(255,255,255,0.45),inset_0_-2px_2px_rgba(0,0,0,0.25)]"
               @click="handleBooking"
             >
               {{ ctaText || 'Booking Now' }}

@@ -15,6 +15,34 @@ export const useResortStore = defineStore('resort', () => {
   const selectedRoom = ref<RoomItem | null>(null)
   const activeGalleryIndex = ref(2) // Default center image in screenshot
 
+  // Cart / Booked Rooms State
+  const bookedRooms = ref<any[]>([])
+
+  const addBookedRoom = (room: any) => {
+    const roomId = String(room.id || room.name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-')
+    const existing = bookedRooms.value.find(
+      (r) => String(r.id).toLowerCase() === roomId || r.name.trim().toLowerCase() === (room.name || '').trim().toLowerCase()
+    )
+    if (existing) {
+      existing.quantity += room.quantity || 1
+    } else {
+      bookedRooms.value.push({
+        id: roomId || `room-${Date.now()}`,
+        name: room.name || 'Room Mega Resort',
+        badge: room.badge || 'BEST OPTION TO STAY',
+        image: room.image || 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80',
+        pricePerUnit: room.price || room.pricePerUnit || 1500000,
+        quantity: room.quantity || 1,
+        dates: room.dates || '04 May 2026 - 07 May 2026',
+        duration: room.duration || '3 Night',
+      })
+    }
+  }
+
+  const removeBookedRoom = (index: number) => {
+    bookedRooms.value.splice(index, 1)
+  }
+
   const fetchResortData = async (force = false) => {
     if (resortData.value && !force) return // already loaded
 
@@ -62,6 +90,9 @@ export const useResortStore = defineStore('resort', () => {
     selectedVilla,
     selectedRoom,
     activeGalleryIndex,
+    bookedRooms,
+    addBookedRoom,
+    removeBookedRoom,
     fetchResortData,
     openBookingModal,
     closeBookingModal,

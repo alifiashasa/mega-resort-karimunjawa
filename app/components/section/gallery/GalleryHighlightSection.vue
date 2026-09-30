@@ -94,24 +94,24 @@ const handleCardView = (item: MomentItem) => {
 </script>
 
 <template>
-  <section id="gallery-highlight" class="py-16 sm:py-20 lg:py-24 bg-[#FFF9EB] overflow-hidden select-none">
+  <section id="gallery-highlight" class="pt-12 sm:pt-14 lg:pt-16 pb-6 sm:pb-8 lg:pb-10 bg-[#FFF9EB] overflow-hidden select-none">
     <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <!-- Section Heading -->
       <h2
-        class="font-spartan text-3xl sm:text-4xl lg:text-[44px] font-semibold text-[#977E5B] mb-4 sm:mb-5 leading-tight tracking-[-0.02em]"
+        class="font-spartan text-3xl sm:text-4xl lg:text-[44px] font-semibold text-[#977E5B] mb-3 sm:mb-4 leading-tight tracking-[-0.02em]"
       >
         {{ t('galleryPage.highlight.title') }}
       </h2>
 
       <!-- Description Paragraph -->
       <p
-        class="font-opensans text-sm sm:text-[15px] lg:text-[16px] text-[#717680] max-w-3xl mx-auto leading-relaxed mb-12 sm:mb-16 font-normal px-2"
+        class="font-opensans text-sm sm:text-[15px] lg:text-[16px] text-[#717680] max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-10 font-normal px-2"
       >
         {{ t('galleryPage.highlight.description') }}
       </p>
 
       <!-- 5 Highlight Cards in a Centered Stepped Row with distinct Gaps -->
-      <div class="flex items-center justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 py-4 min-h-[300px] sm:min-h-[360px] md:min-h-[420px] lg:min-h-[470px]">
+      <div class="flex items-center justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 py-2 min-h-[300px] sm:min-h-[360px] md:min-h-[420px] lg:min-h-[470px]">
         <GalleryMomentCard
           v-for="card in visibleCards"
           :key="`${card.offset}-${card.item.id}`"
@@ -124,7 +124,7 @@ const handleCardView = (item: MomentItem) => {
       </div>
 
       <!-- Navigation Arrows (Slide Card Controls) -->
-      <div class="flex items-center justify-center gap-3.5 mt-8 sm:mt-12">
+      <div class="flex items-center justify-center gap-3.5 mt-6 sm:mt-8">
         <button
           type="button"
           class="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-[#D5C2A5] bg-[#FAFAFA] hover:bg-white text-[#977E5B] hover:text-[#7d6443] flex items-center justify-center transition-all duration-300 ease-out transform hover:scale-115 active:scale-95 shadow-sm hover:shadow-md cursor-pointer select-none"

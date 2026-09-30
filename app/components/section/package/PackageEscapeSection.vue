@@ -43,8 +43,7 @@ const handleExploreClick = () => {
           <div class="pt-6 sm:pt-8">
             <button
               type="button"
-              class="h-[46px] sm:h-[48px] px-6 sm:px-8 inline-flex items-center justify-center text-white font-opensans text-[14px] sm:text-[15px] font-normal rounded-[14px] sm:rounded-[16px] tracking-normal transition-all duration-200 cursor-pointer active:translate-y-[2px] hover:opacity-95"
-              style="background-color: #977E5B; box-shadow: inset 0px 1.5px 0px 0px rgba(255, 255, 255, 0.4), 0px 4px 0px 0px #634F33, 0px 0px 0px 1px #856C4A;"
+              class="h-[46px] sm:h-[48px] px-6 sm:px-8 inline-flex items-center justify-center text-white font-opensans text-[14px] sm:text-[15px] font-normal rounded-[14px] sm:rounded-[16px] tracking-normal transition-all duration-200 cursor-pointer active:scale-[0.99] bg-[#937A54] hover:bg-[#886F4A] border border-[#6D532F]/50 shadow-[inset_0_1.5px_1px_rgba(255,255,255,0.45),inset_0_-2px_2px_rgba(0,0,0,0.25)]"
               @click="handleExploreClick"
             >
               <span class="text-white">{{ t('packagePage.escape.exploreCta') }}</span>

@@ -16,11 +16,29 @@ const isBlogDetailPage = computed(() => {
 })
 
 const isContactPage = computed(() => {
-  return route.path.includes('/contact')
+  return (
+    route.path.includes('/contact') ||
+    route.path.includes('/booking') ||
+    route.path.includes('/detail-booking') ||
+    route.path.includes('/booking-rooms')
+  )
+})
+
+const isFaqPage = computed(() => {
+  return route.path.includes('/faq')
+})
+
+const isBookingDetailPage = computed(() => {
+  return route.path.includes('/booking/detail') || route.path.includes('/booking-rooms/detail') || route.path.includes('/detail-booking')
 })
 
 const isLightHeader = computed(() => {
-  return isBlogDetailPage.value || isContactPage.value
+  return isBlogDetailPage.value || isContactPage.value || isFaqPage.value || isBookingDetailPage.value
+})
+
+const isHomePage = computed(() => {
+  const cleanPath = route.path.replace(/^\/(id|en)(\/|$)/, '/')
+  return cleanPath === '/' || cleanPath === ''
 })
 
 const isRoomsPage = computed(() => {
@@ -55,7 +73,9 @@ const activeRoute = computed(() => {
   if (isDiscoverPage.value) return 'Discover'
   if (isBlogPage.value) return 'Blog'
   if (isContactPage.value) return 'Contact Us'
-  return 'Home'
+  if (isFaqPage.value) return 'FAQ'
+  if (isHomePage.value) return 'Home'
+  return ''
 })
 
 const navLinks = computed(() => [
@@ -67,7 +87,7 @@ const navLinks = computed(() => [
   { name: t('nav.discover'), key: 'Discover', href: localePath('/discover') },
   { name: t('nav.blog'), key: 'Blog', href: localePath('/blog') },
   { name: t('nav.contactUs'), key: 'Contact Us', href: localePath('/contact') },
-  { name: t('nav.faq'), key: 'FAQ', href: '#faq' },
+  { name: t('nav.faq'), key: 'FAQ', href: localePath('/faq') },
 ])
 
 const handleScroll = () => {
@@ -127,13 +147,12 @@ onUnmounted(() => {
 
         <!-- Right CTA: Reserve Now -->
         <div class="hidden lg:flex items-center">
-          <button
-            type="button"
+          <NuxtLink
+            :to="localePath('/booking')"
             class="h-[48px] px-6 flex items-center justify-center bg-[#977E5B] hover:bg-[#856c4c] active:scale-95 text-white font-opensans text-[16px] font-normal rounded-[16px] tracking-normal transition-all duration-300 cursor-pointer shadow-xs"
-            @click="store.openBookingModal()"
           >
             {{ t('nav.reserveNow') }}
-          </button>
+          </NuxtLink>
         </div>
 
         <!-- Mobile Hamburger Button -->
@@ -184,13 +203,13 @@ onUnmounted(() => {
         </div>
 
         <div class="pt-4 border-t" :class="isLightHeader ? 'border-gray-100' : 'border-white/10'">
-          <button
-            type="button"
+          <NuxtLink
+            :to="localePath('/booking')"
             class="w-full h-[48px] flex items-center justify-center bg-[#977E5B] hover:bg-[#856c4c] text-white font-opensans text-[16px] font-normal rounded-[16px] tracking-normal transition-all text-center cursor-pointer"
-            @click="isMobileMenuOpen = false; store.openBookingModal()"
+            @click="isMobileMenuOpen = false"
           >
             {{ t('nav.reserveNow') }}
-          </button>
+          </NuxtLink>
         </div>
       </div>
     </Transition>

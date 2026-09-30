@@ -293,8 +293,7 @@ const handleBooking = (item: { name: string; price: string }) => {
                       <!-- Right: Booking Now Button -->
                       <button
                         type="button"
-                        class="shrink-0 bg-[#977E5B] hover:opacity-95 text-white text-xs sm:text-[13px] font-medium px-4 sm:px-5 py-2 sm:py-2.5 rounded-[10px] transition-all duration-200 cursor-pointer active:translate-y-[2px]"
-                        style="box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4), 0px 3px 0px 0px #634F33, 0px 0px 0px 1px #856C4A;"
+                        class="shrink-0 bg-[#937A54] hover:bg-[#886F4A] text-white text-xs sm:text-[13px] font-medium px-4 sm:px-5 py-2 sm:py-2.5 rounded-[10px] transition-all duration-200 cursor-pointer active:scale-[0.99] border border-[#6D532F]/50 shadow-[inset_0_1.5px_1px_rgba(255,255,255,0.45),inset_0_-2px_2px_rgba(0,0,0,0.25)]"
                         @click="handleBooking(item)"
                       >
                         Booking Now
