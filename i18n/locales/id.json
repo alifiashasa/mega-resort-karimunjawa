@@ -345,5 +345,11 @@
   "faqPage": {
     "title": "Bagaimana Kami Dapat Membantu Anda?",
     "description": "Temukan jawaban cepat seputar reservasi, transportasi, aktivitas, dan kenyamanan menginap Anda di Mega Resort Karimunjawa. Jika masih ada pertanyaan, tim kami siap membantu."
+  },
+  "emptyState": {
+    "title": "Kami Sedang Mengalami Kendala Sementara",
+    "description": "Halaman yang Anda cari saat ini tidak tersedia karena masalah teknis. Silakan coba lagi dalam beberapa saat selagi kami memperbaikinya.",
+    "tryAgain": "Coba Lagi",
+    "backHome": "Kembali ke Beranda"
   }
 }

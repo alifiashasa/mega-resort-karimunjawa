@@ -137,7 +137,7 @@ const handleSearch = () => {
               <input
                 type="date"
                 v-model="checkInDate"
-                class="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                class="absolute inset-0 w-full h-full opacity-0 cursor-pointer [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:inset-0 [&::-webkit-calendar-picker-indicator]:w-full [&::-webkit-calendar-picker-indicator]:h-full [&::-webkit-calendar-picker-indicator]:cursor-pointer"
               />
             </div>
           </div>
@@ -158,7 +158,7 @@ const handleSearch = () => {
               <input
                 type="date"
                 v-model="checkOutDate"
-                class="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                class="absolute inset-0 w-full h-full opacity-0 cursor-pointer [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:inset-0 [&::-webkit-calendar-picker-indicator]:w-full [&::-webkit-calendar-picker-indicator]:h-full [&::-webkit-calendar-picker-indicator]:cursor-pointer"
               />
             </div>
           </div>

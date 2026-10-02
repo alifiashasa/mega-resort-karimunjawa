@@ -93,8 +93,8 @@ const contactForm = ref<ContactForm>({
 })
 
 const stayDetailsForm = ref<StayDetailsForm>({
-  checkIn: '19 - 05 - 2026',
-  checkOut: '22 - 05 - 2026',
+  checkIn: '2026-05-19',
+  checkOut: '2026-05-22',
   nights: 3,
 })
 
@@ -362,7 +362,7 @@ useSeoMeta({
           </div>
 
           <!-- Divider 1 -->
-          <div class="hidden md:block flex-1 h-[2px] bg-[#090C101A] rounded-full mx-4 lg:mx-6"></div>
+          <div class="hidden md:block flex-1 h-[2px] rounded-full mx-4 lg:mx-6 transition-colors" :class="currentStep >= 2 ? 'bg-[#12B76A]' : 'bg-[#090C101A]'"></div>
 
           <!-- Step 2: Guest Information -->
           <div
@@ -387,7 +387,7 @@ useSeoMeta({
           </div>
 
           <!-- Divider 2 -->
-          <div class="hidden md:block flex-1 h-[2px] bg-[#090C101A] rounded-full mx-4 lg:mx-6"></div>
+          <div class="hidden md:block flex-1 h-[2px] rounded-full mx-4 lg:mx-6 transition-colors" :class="currentStep >= 3 ? 'bg-[#12B76A]' : 'bg-[#090C101A]'"></div>
 
           <!-- Step 3: Secure Payment -->
           <div
@@ -397,13 +397,13 @@ useSeoMeta({
           >
             <div
               class="w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-colors"
-              :class="currentStep > 3 ? 'bg-[#12B76A] text-white shadow-xs' : 'bg-[#F2F4F7] border border-[#EAECF0] text-[#667085]'"
+              :class="currentStep >= 3 ? 'bg-[#12B76A] text-white shadow-xs' : 'bg-[#F2F4F7] border border-[#EAECF0] text-[#667085]'"
             >
-              <Check v-if="currentStep > 3" class="w-4 h-4 stroke-[2.5]" />
+              <Check v-if="currentStep >= 3" class="w-4 h-4 stroke-[2.5]" />
               <span v-else class="w-2.5 h-[2px] bg-[#98A2B3] rounded-full inline-block"></span>
             </div>
             <div class="flex flex-col">
-              <span class="text-[16px] font-normal leading-snug" :class="currentStep === 3 ? 'text-[#090C10] font-medium' : 'text-[#344054]'">
+              <span class="text-[16px] leading-snug" :class="currentStep === 3 ? 'text-[#090C10] font-semibold' : 'text-[#344054] font-medium'">
                 Secure Payment
               </span>
               <span class="text-[14px] text-[#717980] leading-normal font-opensans">

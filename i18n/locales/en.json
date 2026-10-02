@@ -345,5 +345,11 @@
   "faqPage": {
     "title": "How Can We Assist You?",
     "description": "Find quick answers about reservations, transportation, activities, and your stay at Mega Resort Karimunjawa. If you still have questions, our team is ready to help."
+  },
+  "emptyState": {
+    "title": "We're Experiencing a Temporary Issue",
+    "description": "The page you're looking for is currently unavailable due to a technical problem. Please try again in a few moments while we work to restore access.",
+    "tryAgain": "Try Again",
+    "backHome": "Back to Home"
   }
 }

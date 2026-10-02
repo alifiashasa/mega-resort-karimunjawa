@@ -3,6 +3,14 @@ import { useResortStore } from '~/stores/resortStore'
 import ResortLogo from '~/components/common/ResortLogo.vue'
 import { Menu, X } from 'lucide-vue-next'
 
+interface Props {
+  forceLight?: boolean
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  forceLight: false,
+})
+
 const { t } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()
@@ -33,7 +41,16 @@ const isBookingDetailPage = computed(() => {
 })
 
 const isLightHeader = computed(() => {
-  return isBlogDetailPage.value || isContactPage.value || isFaqPage.value || isBookingDetailPage.value
+  return (
+    props.forceLight ||
+    route.path.includes('/preview') ||
+    route.path.includes('/404') ||
+    route.path.includes('/error') ||
+    isBlogDetailPage.value ||
+    isContactPage.value ||
+    isFaqPage.value ||
+    isBookingDetailPage.value
+  )
 })
 
 const isHomePage = computed(() => {
@@ -74,8 +91,7 @@ const activeRoute = computed(() => {
   if (isBlogPage.value) return 'Blog'
   if (isContactPage.value) return 'Contact Us'
   if (isFaqPage.value) return 'FAQ'
-  if (isHomePage.value) return 'Home'
-  return ''
+  return 'Home'
 })
 
 const navLinks = computed(() => [
@@ -134,8 +150,8 @@ onUnmounted(() => {
             :class="[
               isLightHeader
                 ? (activeRoute === link.key
-                    ? 'text-[#856c4c] font-semibold after:content-[\'\'] after:absolute after:-bottom-1.5 after:-left-2.5 after:-right-2.5 after:h-[2px] after:bg-[#856c4c]'
-                    : 'text-[#717680] hover:text-[#101828]')
+                    ? 'text-[#977E5B] font-semibold after:content-[\'\'] after:absolute after:-bottom-1.5 after:-left-2.5 after:-right-2.5 after:h-[2px] after:bg-[#977E5B]'
+                    : 'text-[#977E5B] hover:text-[#7d6545]')
                 : (activeRoute === link.key
                     ? 'text-white after:content-[\'\'] after:absolute after:-bottom-1.5 after:-left-2.5 after:-right-2.5 after:h-[1.5px] after:bg-white'
                     : 'text-white/85 hover:text-white')
@@ -160,7 +176,7 @@ onUnmounted(() => {
           <button
             type="button"
             class="p-2 transition-colors"
-            :class="isLightHeader ? 'text-[#101828] hover:text-[#977E5B]' : 'text-white hover:text-[#b98e46]'"
+            :class="isLightHeader ? 'text-[#977E5B] hover:text-[#7d6545]' : 'text-white hover:text-[#b98e46]'"
             @click="isMobileMenuOpen = !isMobileMenuOpen"
             aria-label="Toggle menu"
           >
@@ -193,8 +209,8 @@ onUnmounted(() => {
             class="text-sm font-medium transition-colors py-1 flex items-center justify-between"
             :class="[
               activeRoute === link.key
-                ? (isLightHeader ? 'text-[#856c4c] font-semibold pl-2 border-l-2 border-[#856c4c]' : 'text-[#b98e46] font-semibold pl-2 border-l-2 border-[#b98e46]')
-                : (isLightHeader ? 'text-[#717680] hover:text-[#101828]' : 'text-white/90 hover:text-white')
+                ? (isLightHeader ? 'text-[#977E5B] font-semibold pl-2 border-l-2 border-[#977E5B]' : 'text-[#b98e46] font-semibold pl-2 border-l-2 border-[#b98e46]')
+                : (isLightHeader ? 'text-[#977E5B] hover:text-[#7d6545]' : 'text-white/90 hover:text-white')
             ]"
             @click="isMobileMenuOpen = false"
           >

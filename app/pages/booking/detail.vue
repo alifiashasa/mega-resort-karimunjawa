@@ -455,6 +455,47 @@ useSeoMeta({
             </div>
           </div>
 
+          <!-- 6. GALLERY SECTION -->
+          <div class="space-y-4 pt-2">
+            <div class="flex items-center gap-2.5">
+              <span class="w-[2.5px] h-4.5 bg-[#977E5B] rounded-full inline-block"></span>
+              <h2 class="text-lg sm:text-[20px] font-semibold text-[#101828] font-opensans">
+                Gallery
+              </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+              <template v-if="galleryImages && galleryImages.length > 0">
+                <div
+                  v-for="(img, idx) in galleryImages.slice(0, 3)"
+                  :key="idx"
+                  class="w-full h-[140px] sm:h-[160px] md:h-[180px] rounded-[16px] overflow-hidden bg-[#ECECEE] group cursor-pointer"
+                  @click="selectImage(img)"
+                >
+                  <img
+                    :src="img"
+                    :alt="`Room gallery ${idx + 1}`"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    @error="($event.target as HTMLElement).setAttribute('src', '/images/empty-state-gallery.svg')"
+                  />
+                </div>
+              </template>
+              <template v-else>
+                <div
+                  v-for="i in 3"
+                  :key="i"
+                  class="w-full h-[140px] sm:h-[160px] md:h-[180px] rounded-[16px] bg-[#ECECEE] flex items-center justify-center overflow-hidden"
+                >
+                  <img
+                    src="/images/empty-state-gallery.svg"
+                    alt="Empty Gallery Item"
+                    class="w-20 sm:w-24 md:w-28 h-auto object-contain pointer-events-none select-none opacity-80"
+                  />
+                </div>
+              </template>
+            </div>
+          </div>
+
         </div>
 
         <!-- RIGHT COLUMN: Booking Summary & Support Sidebar -->

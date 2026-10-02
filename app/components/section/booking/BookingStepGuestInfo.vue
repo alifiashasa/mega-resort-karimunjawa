@@ -144,10 +144,10 @@ const agreedToTerms = defineModel<boolean>('agreedToTerms', { required: true })
           <div class="relative">
             <input
               v-model="stayDetailsForm.checkIn"
-              type="text"
-              class="w-full h-[46px] pl-11 pr-4 bg-white rounded-[14px] text-sm sm:text-[15px] text-[#090C10] font-opensans focus:outline-none focus:ring-1 focus:ring-[#977E5B] shadow-button-outlined-default transition-all"
+              type="date"
+              class="w-full h-[46px] pl-11 pr-4 bg-white rounded-[14px] text-sm sm:text-[15px] text-[#090C10] font-opensans focus:outline-none focus:ring-1 focus:ring-[#977E5B] shadow-button-outlined-default transition-all cursor-pointer [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:inset-0 [&::-webkit-calendar-picker-indicator]:w-full [&::-webkit-calendar-picker-indicator]:h-full [&::-webkit-calendar-picker-indicator]:cursor-pointer"
             />
-            <CalendarDays class="w-5 h-5 text-[#090C10] absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <CalendarDays class="w-5 h-5 text-[#090C10] absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
           </div>
         </div>
         <div>
@@ -157,10 +157,10 @@ const agreedToTerms = defineModel<boolean>('agreedToTerms', { required: true })
           <div class="relative">
             <input
               v-model="stayDetailsForm.checkOut"
-              type="text"
-              class="w-full h-[46px] pl-11 pr-4 bg-white rounded-[14px] text-sm sm:text-[15px] text-[#090C10] font-opensans focus:outline-none focus:ring-1 focus:ring-[#977E5B] shadow-button-outlined-default transition-all"
+              type="date"
+              class="w-full h-[46px] pl-11 pr-4 bg-white rounded-[14px] text-sm sm:text-[15px] text-[#090C10] font-opensans focus:outline-none focus:ring-1 focus:ring-[#977E5B] shadow-button-outlined-default transition-all cursor-pointer [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:inset-0 [&::-webkit-calendar-picker-indicator]:w-full [&::-webkit-calendar-picker-indicator]:h-full [&::-webkit-calendar-picker-indicator]:cursor-pointer"
             />
-            <CalendarDays class="w-5 h-5 text-[#090C10] absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <CalendarDays class="w-5 h-5 text-[#090C10] absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
           </div>
         </div>
       </div>
